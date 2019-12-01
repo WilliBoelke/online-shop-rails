@@ -1,48 +1,46 @@
-.branding{
+.branding {
   color: whitesmoke;
   text-transform: uppercase;
   font-size: 20px;
   font-weight: bolder;
+
+  &:hover {
+    color: whitesmoke;
+    text-decoration: none;
+  }
 }
 
-.background-dark{
+.background-dark {
   background-color: darkslategrey;
 }
 
-.nav-link-font{
+.nav-link-font {
   margin-right: 30px;
   color: #bebebe;
   text-transform: uppercase;
   font-size: 14px;
-  text-decoration:none;
+  text-decoration: none;
+
   &:hover {
     color: whitesmoke;
   }
 }
 
-.nav-h1
-{
+.nav-h1 {
   color: whitesmoke;
   font-size: 18px;
   font-weight: bold;
 }
 
-.nav-h2
-{
+.nav-h2 {
   color: whitesmoke;
   font-size: 18px;
 }
 
-.nav-norm-text
-{
+.nav-norm-text {
   color: whitesmoke;
   font-size: 14px;
 }
-
-
-
-
-
 
 
 /*--- Breakpoints --*/

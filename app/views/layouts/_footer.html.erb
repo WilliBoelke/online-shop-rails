@@ -11,36 +11,33 @@
     </div>
     <hr class="clearfix w-100 d-md-none pb-3">
     <div class="col-md-3 mb-md-0 mb-3">
-      <h1 class="nav-h2">Links</h1>
+      <h1 class="nav-h2">About Us</h1>
       <ul class="list-unstyled">
         <li>
-          <a class="nav-link-font" href="#!">Link 1</a>
+          <%= link_to "about", static_pages_about_path, class: "nav-link-font" %>
         </li>
         <li>
-          <a class="nav-link-font" href="#!">Link 2</a>
+          <%= link_to "contact", static_pages_contact_path, class: "nav-link-font" %>
         </li>
         <li>
-          <a class="nav-link-font" href="#!">Link 3</a>
-        </li>
-        <li>
-          <a class="nav-link-font" href="#!">Link 4</a>
+          <%= link_to "help", static_pages_help_path, class: "nav-link-font" %>
         </li>
       </ul>
     </div>
     <div class="col-md-3 mb-md-0 mb-3">
-      <h1 class="nav-h2">Links</h1>
+      <h1 class="nav-h2">Navigation</h1>
       <ul class="list-unstyled">
         <li>
-          <a class="nav-link-font" href="#!">Link 1</a>
+          <%= link_to "Startseite", startpage_path, class: "nav-link-font" %>
         </li>
         <li>
-          <a class="nav-link-font" href="#!">Link 2</a>
+          <%= link_to "Shop", startpage_path, class: "nav-link-font" %>
         </li>
         <li>
-          <a class="nav-link-font" href="#!">Link 3</a>
+          <%= link_to "Zuletzt", startpage_path, class: "nav-link-font" %>
         </li>
         <li>
-          <a class="nav-link-font" href="#!">Link 4</a>
+          <%= link_to "Warenkorb", startpage_path, class: "nav-link-font" %>
         </li>
       </ul>
     </div>
