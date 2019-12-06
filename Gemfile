@@ -34,6 +34,8 @@ gem 'tzinfo-data'
 # and user interface elements to an HTML5 application
 gem "bootstrap-sass", "3.4.1"
 
+gem 'jquery-rails'
+
 group :development, :test do
   # Use sqlite3 as the database for Active Record
   gem "sqlite3"
