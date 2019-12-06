@@ -82,7 +82,7 @@ group :development do
   # i18n-tasks helps you find and manage missing and unused translations
   gem "i18n-tasks", require: false
   # IYE makes it easy to translate your Rails I18N files and keeps them up to date
-  gem "iye", require: false
+  #gem "iye", require: false
   # Preview email in the default browser instead of sending it.
   gem "letter_opener"
 end
