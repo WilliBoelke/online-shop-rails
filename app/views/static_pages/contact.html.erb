@@ -1,2 +1,29 @@
-<h1>StaticPages#contact</h1>
-<p>Find me in app/views/static_pages/contact.html.erb</p>
+<div id="contact" class="container-fluid bg-grey">
+	<br>
+	<h2>Contact us</h2>
+	<h4>Lorem ipsum dolor sit ametet dolore magna aliqua. Ut enim ad mino laboris nisi ut aliquip ex ea commodo
+		consequat.</h4><br><br>
+	<div class="row">
+		<div class="col-sm-5">
+			<p><span class="glyphicon glyphicon-map-marker"></span> Berlin, Deutschland</p>
+			<p><span class="glyphicon glyphicon-phone"></span> +00 1234 123 123</p>
+			<p><span class="glyphicon glyphicon-envelope"></span> onlineshop@htw.com</p>
+		</div>
+		<div class="col-sm-7 slideanim">
+			<div class="row">
+				<div class="col-sm-6 form-group">
+					<input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+				</div>
+				<div class="col-sm-6 form-group">
+					<input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+				</div>
+			</div>
+			<textarea class="form-control" id="comments" name="comments" placeholder="Anliegen" rows="5"></textarea><br>
+			<div class="row">
+				<div class="col-sm-12 form-group">
+					<button class="btn btn-default pull-right" type="submit">Send</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
