@@ -32,7 +32,7 @@ gem 'tzinfo-data'
 # VIEWS
 # Bootstrap, a CSS framework that makes it easy to add nice web design
 # and user interface elements to an HTML5 application
-gem "bootstrap-sass", "3.4.1"
+gem 'bootstrap', '~> 4.3', '>= 4.3.1'
 
 gem 'jquery-rails'
 
