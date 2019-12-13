@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
 
-  devise_for :users
   #root
   root 'shops#index'
 
@@ -12,4 +11,6 @@ Rails.application.routes.draw do
   get "about" => "static_pages#about", as: "about"
   get "contact" => "static_pages#contact", as: "contact"
   get "help" => "static_pages#help", as: "help"
+
+  devise_for :users, path_names: { sign_in: 'login', sign_out: 'logout', sign_up: 'register' }
 end
