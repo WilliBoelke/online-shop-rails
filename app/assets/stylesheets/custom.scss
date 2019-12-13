@@ -1,0 +1,57 @@
+.branding {
+  color: whitesmoke;
+  text-transform: uppercase;
+  font-size: 20px;
+  font-weight: bolder;
+
+  &:hover {
+    color: whitesmoke;
+    text-decoration: none;
+  }
+}
+
+.background-dark {
+  background-color: darkslategrey;
+}
+
+.nav-link-font {
+  margin-right: 30px;
+  color: #bebebe;
+  text-transform: uppercase;
+  font-size: 14px;
+  text-decoration: none;
+
+  &:hover {
+    color: whitesmoke;
+  }
+}
+
+.nav-h1 {
+  color: whitesmoke;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.nav-h2 {
+  color: whitesmoke;
+  font-size: 18px;
+}
+
+.nav-norm-text {
+  color: whitesmoke;
+  font-size: 14px;
+}
+
+/*--- Breakpoints --*/
+/*
+Extra small (xs) devices (portrait phones, less than 576px)
+No media query since this is the default in Bootstrap
+Small (sm) devices (landscape phones, 576px and up)
+@media (min-width: 576px) { ... }
+Medium (md) devices (tablets, 768px and up)
+@media (min-width: 768px) { ... }
+Large (lg) devices (desktops, 992px and up)
+@media (min-width: 992px) { ... }
+Extra (xl) large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) { ... }
+*/
