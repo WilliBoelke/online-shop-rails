@@ -10,27 +10,31 @@
       </ul>
     </div>
   <% end %>
+	
+	<div class="mb1">
+		<%= form.text_field :name, autofocus: true, placeholder: "Name", class: "radius" %>
+	</div>
 
-  <div class="field">
-    <%= form.label :name %>
-    <%= form.text_field :name %>
-  </div>
+	<br>
+	
+	<div class="mb1">
+		<%= form.text_field :price, autofocus: true, placeholder: "Preis", class: "radius" %>
+	</div>
 
-  <div class="field">
-    <%= form.label :price %>
-    <%= form.text_field :price %>
-  </div>
+	<br>
+	
+	<div class="mb1">
+		<%= form.text_area :description, autofocus: true, placeholder: "Beschreibung", class: "radius" %>
+	</div>
 
-  <div class="field">
-    <%= form.label :description %>
-    <%= form.text_area :description %>
-  </div>
+	<br>
+	
+	<div class="mb1">
+		<%= form.text_field :picture, autofocus: true, placeholder: "Bild-URL", class: "radius" %>
+	</div>
 
-  <div class="field">
-    <%= form.label :picture %>
-    <%= form.text_field :picture %>
-  </div>
-
+	<br>
+	
   <div class="actions">
     <%= form.submit %>
   </div>

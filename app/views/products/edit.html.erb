@@ -1,6 +1,20 @@
-<h1>Editing Product</h1>
-
-<%= render 'form', product: @product %>
-
-<%= link_to 'Show', @product %> |
-<%= link_to 'Back', products_path %>
+<div class="edit_form">
+	<br>
+	
+	<h1>Editing Product</h1>
+	
+	<br>
+	<%= render 'form', product: @product %>
+	<br>
+	
+	<%= link_to products_path, class:"item_link" do%>
+		<i class="fas fa-arrow-left fa-2x"></i>
+	<% end %>
+	
+	<%= link_to @product, class:"item_link" do%> 
+		<i class="fas fa-eye fa-2x"></i>
+	<% end %>
+	
+	
+	
+</div>

@@ -85,6 +85,9 @@ group :development do
   #gem "iye", require: false
   # Preview email in the default browser instead of sending it.
   gem "letter_opener"
+  gem 'font-awesome-sass', '~> 5.11.2'
+  gem 'redis', '~> 3.0.1'
+  gem 'hiredis', '~> 0.4.5'
 end
 
 group :test do
@@ -104,8 +107,5 @@ group :test do
   # Speedup RSpec + Cucumber by running parallel on multiple CPU cores
   gem "parallel_tests"
 end
-
-
-gem 'font-awesome-sass', '~> 5.11.2'
 
 

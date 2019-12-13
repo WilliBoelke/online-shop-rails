@@ -2,13 +2,11 @@ class ProductsController < ApplicationController
   before_action :set_product, only: [:show, :edit, :update, :destroy]
 
   # GET /products
-  # GET /products.json
   def index
     @products = Product.all
   end
 
-  # GET /products/1
-  # GET /products/1.json
+  # GET /products/'productid'
   def show
   end
 
@@ -17,7 +15,7 @@ class ProductsController < ApplicationController
     @product = Product.new
   end
 
-  # GET /products/1/edit
+  # GET /products/'productid'/edit
   def edit
   end
 
