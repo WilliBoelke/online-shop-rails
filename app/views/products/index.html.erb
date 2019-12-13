@@ -2,7 +2,8 @@
 <!-- Ausser Container -->
 <div class="container">
 	<% i=0 %>
-	<% @products.each do |product| %>
+	<!--- Produkte angeordnet neu -> alt ---->
+	<% @products.reverse_each do |product| %>
 		<% if i==0 %>
 			<!-- Reihen-Container -->
 			<div class="row">
@@ -30,16 +31,13 @@
 						</dl>
 						<br>
 						<div style="text-align: center;">
-							<!--- cart.add verlinken --->
-							<%= link_to cart_path, class:"item_link" do%>
-								<i class="fas fa-cart-plus fa-4x"></i>
-							<%end%>
+							<i class="fas fa-cart-plus fa-4x"></i>
 							<!--- warchlist.add verlinken --->
 							<i class="fas fa-clock fa-4x"></i>
 							<br>
 							<br>
 							<!-- Edit für Admin (Rechte müssen noch implementiert werden) -->
-							<%= link_to edit_product_path(product), class:"item_link" do %>
+							<!-- <%= link_to edit_product_path(product), class:"item_link" do %> -->
 								<i class="fas fa-edit fa-2x"></i>
 							<% end %>
 							<!-- Delete für Admin (Rechte müssen noch implementiert werden)  -->

@@ -1,41 +1,42 @@
 <%= stylesheet_link_tag 'shop_system', media:'all', 'data-turbolinks-track': 'reload' %>
-<div class="container" style="text-align:center;border:solid 5px white;padding:5px;background-color:rgba(47,79,79,0.6);)">
+<div class="container">
+	<div class="inner">	
+		<p id="notice"><%= notice %></p>
+		
+		<p>
+			<h2><%= @product.name %></h2>
+		</p>
+		
+		<%= image_tag(@product.picture, width:'500', :style => "border: 1px solid black" )%>
+		
+		<p>
+			<strong>Price:</strong>
+			<%= @product.price %> €
+		</p>
+		
+		<p>
+			<strong>Description:</strong>
+			<%= @product.description %>
+		</p>
 	
-	<p id="notice"><%= notice %></p>
-	
-	<p>
-		<h2><%= @product.name %></h2>
-	</p>
-	
-	<%= image_tag(@product.picture, width:'500', :style => "border: 1px solid black" )%>
-	
-	<p>
-		<strong>Price:</strong>
-		<%= @product.price %> €
-	</p>
-	
-	<p>
-		<strong>Description:</strong>
-		<%= @product.description %>
-	</p>
-
-	<!--- warenkorb.add verlinken --->
-	<i class="fas fa-cart-plus fa-4x"></i>
-	<!--- warchlist.add verlinken --->
-	<i class="fas fa-clock fa-4x"></i>
-	<br>
-	<br>
-	<%= link_to products_path, class:"item_link" do%>
-		<i class="fas fa-arrow-left fa-2x"></i>
-	<% end %>
-	<%= link_to edit_product_path(@product), class:"item_link" do %>
-		<i class="fas fa-edit fa-2x"></i>
-	<% end %>
-	<%= link_to @product, class:"item_link", method: :delete, data: { confirm: 'Are you sure?' } do %>
-		<i class="fas fa-trash fa-2x"></i>
-	<% end %>
-	<br>
-	<br>
+		<!--- warenkorb.add verlinken --->
+		<i class="fas fa-cart-plus fa-4x"></i>
+		<!--- warchlist.add verlinken --->
+		<i class="fas fa-clock fa-4x"></i>
+		<br>
+		<br>
+		<%= link_to products_path, class:"item_link" do%>
+			<i class="fas fa-arrow-left fa-2x"></i>
+		<% end %>
+		<%= link_to edit_product_path(@product), class:"item_link" do %>
+			<i class="fas fa-edit fa-2x"></i>
+		<% end %>
+		<%= link_to @product, class:"item_link", method: :delete, data: { confirm: 'Are you sure?' } do %>
+			<i class="fas fa-trash fa-2x"></i>
+		<% end %>
+		<br>
+		<br>
+	</div>
 </div>
 
 
