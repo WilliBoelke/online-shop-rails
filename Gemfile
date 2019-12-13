@@ -17,7 +17,8 @@ gem 'webpacker', '~> 4.0'
 gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.7'
-
+#gem for placeholder/fake content of the static pages
+#gem 'faker', :git => 'https://github.com/faker-ruby/faker.git', :branch => 'master'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use Active Model has_secure_password
@@ -32,7 +33,7 @@ gem 'tzinfo-data'
 # VIEWS
 # Bootstrap, a CSS framework that makes it easy to add nice web design
 # and user interface elements to an HTML5 application
-gem "bootstrap-sass", "3.4.1"
+gem 'bootstrap', '~> 4.3', '>= 4.3.1'
 
 gem 'jquery-rails'
 

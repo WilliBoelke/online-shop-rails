@@ -1,0 +1,25 @@
+<nav class="navbar navbar-expand-md background-dark sticky-top">
+	<div class="container-fluid">
+		<div class="branding">
+			<%= link_to "onlineshop", shop_path, class: "branding" %>
+		</div>
+		<button class="navbar-toggler navbar-dark" type="button" data-toggle="collapse" data-target="#navbarResposive">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarResposive">
+			<ul class="navbar-nav ml-auto">
+				<li class="nav-item">
+					<%= link_to "Shop", shop_path, class: "nav-link-font nav-link" %>
+				</li>
+				<li class="nav-item">
+					<%= link_to "Zuletzt", shop_path, class: "nav-link-font nav-link" %>
+				</li>
+				<li class="nav-item">
+					<%= link_to "Warenkorb", shop_path, class: "nav-link-font nav-link" %>
+				</li>
+			</ul>
+		</div>
+	</div>
+</nav>
+
+
