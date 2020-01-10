@@ -89,6 +89,7 @@ group :development do
   gem 'font-awesome-sass', '~> 5.11.2'
   gem 'redis', '~> 3.0.1'
   gem 'hiredis', '~> 0.4.5'
+  gem 'popper_js', '~> 1.11', '>= 1.11.1'
 end
 
 group :test do

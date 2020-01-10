@@ -402,6 +402,7 @@ DEPENDENCIES
   license_finder (>= 3.1.1)
   listen (>= 3.0.5, < 3.2)
   parallel_tests
+  popper_js (~> 1.11, >= 1.11.1)
   pry-byebug
   pry-rails
   puma (~> 4.1)

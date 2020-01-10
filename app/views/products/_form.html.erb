@@ -12,27 +12,43 @@
   <% end %>
 	
 	<div class="mb1">
-		<%= form.text_field :name, autofocus: true, placeholder: "Name", class: "radius" %>
+		<%= form.label :name, 'Name: ' %>
+		<br>
+		<%= form.text_field :name, autofocus: true, placeholder: "Name", class: "radius", :size=>"50" %>
 	</div>
 
 	<br>
 	
 	<div class="mb1">
-		<%= form.text_field :price, autofocus: true, placeholder: "Preis", class: "radius" %>
+		<%= form.label :price, 'Preis: ' %>
+		<br>
+		<%= form.text_field :price, autofocus: true, placeholder: "Preis", class: "radius", :size=>"50" %>
 	</div>
 
 	<br>
 	
 	<div class="mb1">
-		<%= form.text_area :description, autofocus: true, placeholder: "Beschreibung", class: "radius" %>
+		<%= form.label :name, 'Beschreibung: ' %>
+		<br>
+		<%= form.text_area :description, autofocus: true, placeholder: "Beschreibung", class: "radius", :size=>"50" %>
 	</div>
 
 	<br>
 	
 	<div class="mb1">
-		<%= form.text_field :picture, autofocus: true, placeholder: "Bild-URL", class: "radius" %>
+		<%= form.label :name, 'Foto-URL: ' %>
+		<br>
+		<%= form.text_field :picture, autofocus: true, placeholder: "Bild-URL", class: "radius", :size=>"50" %>
 	</div>
 
+	<br>
+
+	<div class="mb1">
+		<%= form.label :name, 'Typ: ' %>
+		<br>
+		<%= form.select(:cloth_type, ["T-Shirt", "Pullover"], {}, :style=>"width:100") %>
+	</div>
+	
 	<br>
 	
   <div class="actions">
