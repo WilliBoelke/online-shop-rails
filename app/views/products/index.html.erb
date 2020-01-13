@@ -30,11 +30,11 @@
 					<%= @label_o %>
 				</button>
 				<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-					<%= link_to $old_to_new_l, filter_path(order: $old_to_new_l, filter: @label_f), class:"dropdown-item" %>
-					<%= link_to $new_to_old_l, filter_path(order: $new_to_old_l, filter: @label_f), class:"dropdown-item" %>
-					<%= link_to $high_to_low_l, filter_path(order: $high_to_low_l, filter: @label_f), class:"dropdown-item" %>
-					<%= link_to $low_to_high_l, filter_path(order: $low_to_high_l, filter: @label_f), class:"dropdown-item" %>
-					<%= link_to $alphabetic_l, filter_path(order: $alphabetic_l, filter: @label_f), class:"dropdown-item" %>
+					<%= link_to "Alt bis neu", filter_path(order_scope: :OLD_TO_NEW, filter_scope: @filter_scope), class:"dropdown-item" %>
+					<%= link_to "Neuste zuerst", filter_path(order_scope: :NEW_TO_OLD, filter_scope: @filter_scope), class:"dropdown-item" %>
+					<%= link_to "Preis absteigend", filter_path(order_scope: :HIGH_TO_LOW, filter_scope: @filter_scope), class:"dropdown-item" %>
+					<%= link_to "Preis aufsteigend", filter_path(order_scope: :LOW_TO_HIGH, filter_scope: @filter_scope), class:"dropdown-item" %>
+					<%= link_to "Alphabetisch", filter_path(order_scope: :ALPHABETIC, filter_scope: @filter_scope), class:"dropdown-item" %>
 				</div>
 			</div>
 		</div>
@@ -46,9 +46,9 @@
 					<%= @label_f %>
 				</button>
 				<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-					<%= link_to $all_clothes_l, filter_path(filter: $all_clothes_l, order: @label_o), class:"dropdown-item" %>
-					<%= link_to $t_shirt_l, filter_path(filter: $t_shirt_l, order: @label_o), class:"dropdown-item" %>
-					<%= link_to $pullover_l, filter_path(filter: $pullover_l, order: @label_o), class:"dropdown-item" %>
+					<%= link_to "Alle", filter_path(filter_scope: :ALL_CLOTHES, order_scope: @order_scope), class:"dropdown-item" %>
+					<%= link_to "T-Shirts", filter_path(filter_scope: :T_SHIRTS, order_scope: @order_scope), class:"dropdown-item" %>
+					<%= link_to "Pullover", filter_path(filter_scope: :PULLOVER, order_scope: @order_scope), class:"dropdown-item" %>
 				</div>
 			</div>
 		</div>

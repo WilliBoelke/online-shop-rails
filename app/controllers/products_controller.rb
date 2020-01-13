@@ -1,50 +1,33 @@
 class ProductsController < ApplicationController
+
+  include ProductsHelper
+
   before_action :set_product, only: [:show, :edit, :update, :destroy]
 
   # GET /products
   def index
      @products ||= Product.new_to_old
-     @label_o ||= $new_to_old_l
-     @label_f ||= $all_clothes_l
+     @filter_scope ||= :ALL_CLOTHES
+     @order_scope ||= :NEW_TO_OLD
+     @label_o ||= "Neuste zuerst"
+     @label_f ||= "Alle"
   end
 
   def filter
+    @filter_scope = params[:filter_scope].to_sym
+    filter_config = PRODUCT_FILTER[@filter_scope]
+    @label_f = filter_config[:label]
 
-    case params[:filter]
-    when $all_clothes_l
-      @products = Product.all_types
-      @label_f = $all_clothes_l
-    when $t_shirt_l
-      @products = Product.shirt_only
-      @label_f = $t_shirt_l
-    when $pullover_l
-      @products = Product.pullover_only
-      @label_f = $pullover_l
-    end
+    @order_scope = params[:order_scope].to_sym
+    order_config = PRODUCT_SORT[@order_scope]
+    @label_o = order_config[:label]
 
-    case params[:order]
-    when $low_to_high_l
-      @label_o = $low_to_high_l
-      @products = @products.low_to_high
-    when $high_to_low_l
-      @label_o = $high_to_low_l
-      @products = @products.high_to_low
-    when $old_to_new_l
-      @label_o = $old_to_new_l
-      @products = @products.old_to_new
-    when $alphabetic_l
-      @label_o = $alphabetic_l
-      @products = @products.alphabetic
-    when $new_to_old_l
-      @label_o = $new_to_old_l
-      @products = @products.new_to_old
-    end
+    @products = Product.try(filter_config[:method]).try(order_config[:method])
 
     respond_to do |format|
       format.html { render "index" }
       format.json { render json: @products }
     end
-
   end
 
   def search
