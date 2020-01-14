@@ -38,3 +38,4 @@ yarn-debug.log*
 # file: ~/.gitignore_global
 .idea
 
+coverage

@@ -1,0 +1,18 @@
+<div class="container">	
+	<div class="inner">
+		
+		<h1>Editing Product</h1>
+		
+		<br>
+		<%= render 'form', product: @product %>
+		<br>
+		
+		<%= link_to products_path, class:"item_link" do%>
+			<i class="fas fa-arrow-left fa-2x"></i>
+		<% end %>
+		
+		<%= link_to @product, class:"item_link" do%> 
+			<i class="fas fa-eye fa-2x"></i>
+		<% end %>
+	</div>
+</div>

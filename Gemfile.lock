@@ -98,7 +98,6 @@ GEM
     concurrent-ruby (1.1.5)
     crass (1.0.5)
     database_cleaner (1.7.0)
-    debug_inspector (0.0.3)
     devise (4.7.1)
       bcrypt (~> 3.0)
       orm_adapter (~> 0.1)
@@ -141,6 +140,7 @@ GEM
       guard (~> 2.0)
       rubocop (~> 0.20)
     highline (2.0.3)
+    hiredis (0.4.5)
     i18n (1.7.0)
       concurrent-ruby (~> 1.0)
     i18n-tasks (0.9.29)
@@ -265,6 +265,7 @@ GEM
     rb-fsevent (0.10.3)
     rb-inotify (0.10.0)
       ffi (~> 1.0)
+    redis (3.0.7)
     regexp_parser (1.6.0)
     responders (3.0.0)
       actionpack (>= 5.0)
@@ -391,6 +392,7 @@ DEPENDENCIES
   guard-bundler
   guard-minitest
   guard-rubocop
+  hiredis (~> 0.4.5)
   i18n-tasks
   jbuilder (~> 2.7)
   jquery-rails
@@ -398,11 +400,13 @@ DEPENDENCIES
   license_finder (>= 3.1.1)
   listen (>= 3.0.5, < 3.2)
   parallel_tests
+  popper_js (~> 1.11, >= 1.11.1)
   pry-byebug
   pry-rails
   puma (~> 4.3)
   rails (~> 6.0.1.rc1)
   rails-controller-testing
+  redis (~> 3.0.1)
   rubocop-rails_config
   sass-rails (>= 6)
   selenium-webdriver

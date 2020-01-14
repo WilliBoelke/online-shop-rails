@@ -1,17 +1,20 @@
 <!DOCTYPE html>
 <html lang="de">
 <html>
-	<head>
-		<title>Belegarbeit</title>
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <head>
+    <title>BelegarbeitRor</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
 		<%= stylesheet_link_tag 'custom', media: 'all', 'data-turbolinks-track': 'reload' %>
-		<%= stylesheet_link_tag 'static_pages', media: 'all', 'data-turbolinks-track': 'reload' %>
-		<%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
-	</head>
-	<body>
+		<%= stylesheet_link_tag 'shop_system', media:'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body class="ice">
 		<%= render "layouts/header" %>
-		<%= yield %>
+    <%= yield %>
 		<%= render "layouts/footer" %>
-	</body>
+  </body>
 </html>
