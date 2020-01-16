@@ -1,3 +1,8 @@
+<% if cookies[:dark] %>
+	<%= stylesheet_link_tag 'nav_bar_dark', media: 'all', 'data-turbolinks-track': 'reload' %>
+<% else %>
+	<%= stylesheet_link_tag 'nav_bar_light', media: 'all', 'data-turbolinks-track': 'reload' %>
+<% end %>
 <nav class="navbar navbar-expand-md background-dark sticky-top">
 	<div class="container-fluid">
 		<div class="branding">

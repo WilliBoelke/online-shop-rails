@@ -1,8 +1,9 @@
-class ApplicationController < ActionController::Base
+# frozen_string_literal: true
 
+class ApplicationController < ActionController::Base
   def dark
     cookies[:dark] = {
-        value: 'dark mode on'
+        value: "dark mode on"
     }
     redirect_back(fallback_location: root_path)
   end
@@ -11,5 +12,4 @@ class ApplicationController < ActionController::Base
     cookies.delete(:dark)
     redirect_back(fallback_location: root_path)
   end
-
 end

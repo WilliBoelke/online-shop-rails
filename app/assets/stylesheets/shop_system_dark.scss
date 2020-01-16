@@ -1,15 +1,16 @@
+@import "application_dark";
+
 .item_link{
-  color: black;
+  color: $font_color_dark;
   text-decoration:none;
 
   &:hover {
-    color: darkslategrey;
+    color: $accent_color_dark;
     text-decoration: none;
   }
 }
 .ice{
-  background-image: url("background_dark.jpg");
-  background-size: cover;
+
 }
 .col-md-4_edit{
   text-align: center;
@@ -24,7 +25,7 @@
 }
 .product_picture{
   height: 250px;
-  border: 1px solid darkslategrey;
+  border: 1px solid $accent_color_dark;
 }
 .new_form{
   text-align:center;
@@ -39,7 +40,7 @@
   background-color:rgba(47,79,79,0.6);
 }
 .dl-horizontal_edit{
-  color:black;
+  color: #f3fff5;
   text-align: left;
 }
 .row_edit{
@@ -49,6 +50,6 @@
   text-align: center;
 }
 .btn-info{
-  background-color: black;
+  background-color:$font_color_dark ;
 }
 

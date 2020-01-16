@@ -1,10 +1,4 @@
-@import "var";
-
-.faqHeader {
-  color: $font_color_dark;
-  font-size: 27px;
-  margin: 20px;
-}
+@import "application_dark";
 
 .panel-heading [data-toggle="collapse"]:after {
   color: $font_color_dark;
@@ -30,3 +24,5 @@
   transform: rotate(90deg);
   color: $font_color_dark;
 }
+
+

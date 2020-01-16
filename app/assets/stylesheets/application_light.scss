@@ -2,10 +2,46 @@
 @import "font-awesome-sprockets";
 @import "font-awesome";
 
-@import "nav_bar_light";
-@import "shop_system_light";
-@import "shops_light";
-@import "static_pages_light";
+body {
+  background-image: url("background_light.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
 
 
+$background_color_light: whitesmoke;
+$accent_color_light: #3e6b6b;
+$font_color_light: #191919;
 
+$background_color_dark: #191919;
+$accent_color_dark: #214141;
+$font_color_dark: whitesmoke;
+
+$nav_color: #CED5E9;
+$nav_hover_colo: #e0e7fc;
+$button_color: #7e7e7e;
+
+
+//Blured div
+.blur-div {
+  background: inherit;
+  width: inherit;
+  height: inherit;
+  position: absolute;
+  overflow: hidden; //adding overflow hidden
+  &:before {
+    content: "";
+    width: inherit -50px;
+    height: inherit -50px;
+    background: inherit;
+    position: absolute;
+    left: -25px; //giving minus -25px left position
+    right: 0;
+    top: -25px; //giving minus -25px top position
+    bottom: 0;
+    box-shadow: inset 0 0 0 200px rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(20px);
+    filter: blur(10px);
+  }
+}

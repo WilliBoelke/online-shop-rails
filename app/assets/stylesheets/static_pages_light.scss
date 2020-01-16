@@ -1,7 +1,4 @@
-// Place all the styles related to the Static_pages controller here.
-// They will automatically be included in application_light.scss.
-// You can use Sass (SCSS) here: https://sass-lang.com/
-
+@import "application_light";
 
 .faqHeader {
   font-size: 27px;
@@ -32,3 +29,6 @@
   transform: rotate(90deg);
   color: #454444;
 }
+
+
+
