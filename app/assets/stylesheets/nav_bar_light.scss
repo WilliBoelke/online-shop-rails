@@ -1,3 +1,5 @@
+@import "var";
+
 .branding {
   color: whitesmoke;
   text-transform: uppercase;
@@ -11,7 +13,7 @@
 }
 
 .background-dark {
-  background-color: darkslategrey;
+  background-color: #375d5d;
 }
 
 .nav-link-font {

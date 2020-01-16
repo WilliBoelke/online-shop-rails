@@ -1,16 +1,18 @@
+@import "var";
+
 .background-dark {
-  background-color: #030707;
+  background-color: $accent_color_dark;
 }
 
 .nav-link-font {
   margin-right: 30px;
-  color: #303030;
+  color: $nav_color;
   text-transform: uppercase;
   font-size: 14px;
   text-decoration: none;
 
   &:hover {
-    color: whitesmoke;
+    color: $nav_hover_colo;
   }
 }
 
