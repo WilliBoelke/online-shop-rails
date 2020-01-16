@@ -1,0 +1,54 @@
+.item_link{
+  color: black;
+  text-decoration:none;
+
+  &:hover {
+    color: darkslategrey;
+    text-decoration: none;
+  }
+}
+.ice{
+  background-image: url("background_dark.jpg");
+  background-size: cover;
+}
+.col-md-4_edit{
+  text-align: center;
+  padding: 5px;
+}
+.inner{
+  border:solid 2px rgba(255,255,255,0.5);
+  background-color:rgba(47,79,79,0.7);
+  text-align:center;
+  margin: 5px;
+  padding: 8px;
+}
+.product_picture{
+  height: 250px;
+  border: 1px solid darkslategrey;
+}
+.new_form{
+  text-align:center;
+  border:solid 5px white;
+  padding:5px;
+  background-color:rgba(47,79,79,0.6);
+}
+.edit_form{
+  text-align:center;
+  border:solid 5px white;
+  padding:5px;
+  background-color:rgba(47,79,79,0.6);
+}
+.dl-horizontal_edit{
+  color:black;
+  text-align: left;
+}
+.row_edit{
+  width:100%;
+}
+.container-fluid_edit{
+  text-align: center;
+}
+.btn-info{
+  background-color: black;
+}
+

@@ -17,6 +17,21 @@
 				<li class="nav-item">
 					<%= link_to "Warenkorb", shop_path, class: "nav-link-font nav-link" %>
 				</li>
+				<li class="nav-item">
+					<div class="dropdown">
+						<button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+										aria-haspopup="true" aria-expanded="false">
+							Setting
+						</button>
+						<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+							<% if cookies[:dark] %>
+								<%= button_to 'Light Mode', light_path %>
+							<% else %>
+								<%= button_to 'Dark Mode', dark_path %>
+							<% end %>
+						</div>
+					</div>
+				</li>
 			</ul>
 		</div>
 	</div>
