@@ -29,16 +29,20 @@
 # To learn more, please read the Rails Internationalization guide
 # available at https://guides.rubyonrails.org/i18n.html.
 
-en:
-  static_pages:
+de:
+  static_pages: 
     about:
-      titel: "About us"
-      subtitel: "We are lorem ipsum dolor sit ametet dolore magna aliqua. Ut enim ad mino laboris nisi ut aliquip ex ea commodo consequat."
+      titel: "Über uns"
+      subtitel: "Wir sind lorem ipsum dolor sit ametet dolore magna aliqua. Ut enim ad mino laboris nisi ut aliquip ex ea commodo
+				consequat."
       text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
               magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
               consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
               laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-              ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+              ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+              magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+              consequat. Excepteur sint occaecat cupidatat non proident."
     help:
     contact:
+    
     
