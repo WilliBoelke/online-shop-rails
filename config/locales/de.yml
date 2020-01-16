@@ -28,4 +28,23 @@ de:
       languages: "Sprachen"
       german: "Deutsch"
       english: "Englisch"
-        
+    footer:
+      shop: "Laden"
+      recent: "Zuletzt"
+      cart: "Warenkorb"
+      about: "Über uns"
+      contact: "Kontakt"
+      help: "Hilfe" 
+  
+  products:
+    index:
+      filter: 
+      oldnew: "Alt bis neu"
+      newfirst: "Neuste zuerst"
+      priceup: "Peis aufsteigend"
+      pricedown: "Peis absteigend"
+      alphabetical: "Alphabetisch"
+    show:
+      price: "Preis"
+      type: "Typ"
+      description: "Beschreibung"

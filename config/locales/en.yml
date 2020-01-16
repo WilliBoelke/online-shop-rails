@@ -24,5 +24,24 @@ en:
       languages: "Languages"
       german: "German"
       englich: "English"
+    footer:
+      shop: "Shop"
+      recent: "Recent"
+      cart: "Cart"
+      about: "About"
+      contact: "Contact"
+      help: "Help" 
         
-    
+  products:
+    index:
+      filter:
+      oldnew: "from old to new"
+      newfirst: "Newest first"
+      priceup: "Price descending"
+      pricedown: "Price ascending"
+      alphabetical: "Alphabetical"
+    show:
+      price: "Price"
+      type: "Type"
+      description: "Description"
+      
