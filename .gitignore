@@ -38,4 +38,6 @@ yarn-debug.log*
 # file: ~/.gitignore_global
 .idea
 
+# dont add/commit/push email credentials
+.env
 coverage

@@ -1,16 +1,20 @@
 
 # frozen_string_literal: true
-#
+source "https://rubygems.org"
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby '2.6.5'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 6.0.1.rc1'
+gem 'rails', '~> 6.0.1'
 # User  creation
 gem 'devise'
+# env file for email credentials
+gem 'dotenv-rails'
 # Use Puma as the app server
 gem 'puma', '~> 4.3'
 # Use SCSS for stylesheets
 gem 'sass-rails', '>= 6'
+
+gem 'font-awesome-sass', '~> 5.11.2'
 # Transpile app-like JavaScript. Read more: https://github.com/rails/webpacker
 gem 'webpacker', '~> 4.0'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
@@ -84,9 +88,8 @@ group :development do
   gem "i18n-tasks", require: false
   # Preview email in the default browser instead of sending it.
   gem "letter_opener"
-  gem 'font-awesome-sass', '~> 5.11.2'
   gem 'redis', '~> 3.0.1'
-  gem 'hiredis', '~> 0.4.5'
+ # gem 'hiredis', '~> 0.4.5'
   gem 'popper_js', '~> 1.11', '>= 1.11.1'
 end
 
@@ -109,3 +112,6 @@ group :test do
 end
 
 
+group :production do
+  gem 'pg'
+end

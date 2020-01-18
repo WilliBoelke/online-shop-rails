@@ -1,12 +1,8 @@
 Rails.application.routes.draw do
 
+  devise_for :user, :path => '', :path_names => { :sign_in => "login", :sign_out => "logout", :sign_up => "register" }
 
   root 'products#index'
-
-  devise_for :users
-  #root
-  root 'shops#index'
-
 
   resources :products
 
