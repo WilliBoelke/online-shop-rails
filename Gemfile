@@ -1,41 +1,42 @@
 
 # frozen_string_literal: true
+
 #
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
-ruby '2.6.5'
+ruby "2.6.5"
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 6.0.1.rc1'
+gem "rails", "~> 6.0.1.rc1"
 # User  creation
-gem 'devise'
+gem "devise"
 # Use Puma as the app server
-gem 'puma', '~> 4.3'
+gem "puma", "~> 4.3"
 # Use SCSS for stylesheets
-gem 'sass-rails', '>= 6'
+gem "sass-rails", ">= 6"
 # Transpile app-like JavaScript. Read more: https://github.com/rails/webpacker
-gem 'webpacker', '~> 4.0'
+gem "webpacker", "~> 4.0"
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
-gem 'turbolinks', '~> 5'
+gem "turbolinks", "~> 5"
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
-gem 'jbuilder', '~> 2.7'
-#gem for placeholder/fake content of the static pages
-#gem 'faker', :git => 'https://github.com/faker-ruby/faker.git', :branch => 'master'
+gem "jbuilder", "~> 2.7"
+# gem for placeholder/fake content of the static pages
+# gem 'faker', :git => 'https://github.com/faker-ruby/faker.git', :branch => 'master'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use Active Model has_secure_password
-gem 'bcrypt', '~> 3.1.7'
+gem "bcrypt", "~> 3.1.7"
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 # Reduces boot times through caching; required in config/boot.rb
-gem 'bootsnap', '>= 1.4.2', require: false
+gem "bootsnap", ">= 1.4.2", require: false
 
-gem 'tzinfo-data'
+gem "tzinfo-data"
 
 # VIEWS
 # Bootstrap, a CSS framework that makes it easy to add nice web design
 # and user interface elements to an HTML5 application
-gem 'bootstrap', '~> 4.3', '>= 4.3.1'
+gem "bootstrap", "~> 4.3", ">= 4.3.1"
 
-gem 'jquery-rails'
+gem "jquery-rails"
 
 group :development, :test do
   # Use sqlite3 as the database for Active Record
@@ -84,10 +85,10 @@ group :development do
   gem "i18n-tasks", require: false
   # Preview email in the default browser instead of sending it.
   gem "letter_opener"
-  gem 'font-awesome-sass', '~> 5.11.2'
-  gem 'redis', '~> 3.0.1'
-  gem 'hiredis', '~> 0.4.5'
-  gem 'popper_js', '~> 1.11', '>= 1.11.1'
+  gem "font-awesome-sass", "~> 5.11.2"
+  gem "redis", "~> 3.0.1"
+  # gem 'hiredis', '~> 0.4.5'
+  gem "popper_js", "~> 1.11", ">= 1.11.1"
 end
 
 group :test do
@@ -107,5 +108,3 @@ group :test do
   # Speedup RSpec + Cucumber by running parallel on multiple CPU cores
   gem "parallel_tests"
 end
-
-

@@ -1,4 +1,6 @@
-require 'test_helper'
+# frozen_string_literal: true
+
+require "test_helper"
 
 class StaticPagesControllerTest < ActionDispatch::IntegrationTest
   test "should get about" do
@@ -15,5 +17,4 @@ class StaticPagesControllerTest < ActionDispatch::IntegrationTest
     get static_pages_contact_url
     assert_response :success
   end
-
 end

@@ -1,3 +1,9 @@
+<% if cookies[:dark] %>
+	<%= stylesheet_link_tag 'application_dark', media: 'all', 'data-turbolinks-track': 'reload' %>
+<% else %>
+	<%= stylesheet_link_tag 'application_light', media: 'all', 'data-turbolinks-track': 'reload' %>
+<% end %>
+
 <div class="container-fluid text-center text-md-left background-dark">
 	<div class="row">
 		<div class="col-md-6 mt-md-0 mt-3">
