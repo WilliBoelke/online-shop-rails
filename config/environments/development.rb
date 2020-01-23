@@ -1,4 +1,6 @@
+
 Rails.application.configure do
+  Dotenv::Railtie.load
   # Settings specified here will take precedence over those in config/application.rb.
 
   # In the development environment your application's code is reloaded on
@@ -30,21 +32,24 @@ Rails.application.configure do
 
   # Store uploaded files on the local file system (see config/storage.yml for options).
   config.active_storage.service = :local
-  config.action_mailer.perform_caching = false
 
 
-  config.action_mailer.perform_deliveries = true
+  config.action_mailer.default_url_options = { :host =>'localhost:3000' }
   config.action_mailer.delivery_method = :smtp
-  config.action_mailer.default_url_options = { :host => "dev.yourhost.com" }
+  config.action_mailer.perform_deliveries = true
+  config.action_mailer.raise_delivery_errors = true
+  config.action_mailer.default :charset => "utf-8"
   config.action_mailer.smtp_settings = {
-    address:              'smtp.gmail.com',
-    port:                 '587',
-    domain:               ENV['MAIL_HOST'],
-    user_name:            ENV['SENDMAIL_USERNAME'],
-    password:             ENV['SENDMAIL_PASSWORD'],
-    authentication:       'login',
-    enable_starttls_auto: true
+    address: "smtp.gmail.com",
+    port: 587,
+    domain: "gmail.com",
+    authentication: "plain",
+    enable_starttls_auto: true,
+    user_name: ENV['SENDMAIL_USERNAME'],
+    password: ENV["SENDMAIL_PASSWORD"]
   }
+
+
   # Print deprecation notices to the Rails logger.
   config.active_support.deprecation = :log
 
