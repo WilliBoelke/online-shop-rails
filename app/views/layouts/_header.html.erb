@@ -27,21 +27,29 @@
 						<div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
 							<ul>
 								<!--Darkmode Toggle-->
-								<li  class="dropdown-item">
+								<br>
+								<p class="h6">
+									<%= t ('layouts.header.appearance') %>
+									<br>
+								<p>
+								<li>
 									<% if cookies[:dark] %>
-										<%= button_to 'Light Mode' %>
+										<%= link_to 'Light Mode', class: 'dropdown-item' %>
 									<% else %>
-										<%= button_to 'Dark Mode' %>
+										<%= link_to 'Dark Mode', class: 'dropdown-item' %>
 									<% end %>
 								</li>
 								<!--Languages-->
-
-								<%= t "layouts.header.languages" %>
-								<li  class="dropdown-item">
-									<%= link_to_unless_current (t "layouts.header.german"), locale: "de" %>
+								<br>
+								<p class="h6">
+									<%= t ('layouts.header.languages') %>
+									<br>
+								<p>
+								<li>
+									<%= link_to_unless_current t('layouts.header.german'), locale_path(locale: 'de'), method: :post, class: 'dropdown-item' %>
 								</li>
-								<li  class="dropdown-item">
-									<%= link_to_unless_current (t "layouts.header.english"), locale: "en" %>
+								<li>
+									<%= link_to_unless_current t('layouts.header.english'), locale_path(locale: 'en'), method: :post, class: 'dropdown-item' %>
 								</li>
 							</ul>
 						</div>
