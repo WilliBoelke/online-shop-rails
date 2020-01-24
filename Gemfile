@@ -13,7 +13,11 @@ gem 'dotenv-rails'
 gem 'puma', '~> 4.3'
 # Use SCSS for stylesheets
 gem 'sass-rails', '>= 6'
-
+#admin users / user authorization
+gem 'cancancan'
+#user roles
+gem 'rolify'
+#
 gem 'font-awesome-sass', '~> 5.11.2'
 # Transpile app-like JavaScript. Read more: https://github.com/rails/webpacker
 gem 'webpacker', '~> 4.0'
