@@ -21,7 +21,7 @@
 			<ul class="right navbar-nav">
 				<% if signed_in? %>
 					<li>
-						<%= link_to current_user.email, "profile" , class: "nav-link-font nav-auth" %>
+						<%= link_to current_user.name, "profile" , class: "nav-link-font nav-auth" %>
 					</li>
 					<li class=" av-link-font nav-auth ">
 						<%= link_to "logout", destroy_user_session_path, method: :delete  %>
