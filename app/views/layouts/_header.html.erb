@@ -21,7 +21,11 @@
 			<ul class="right navbar-nav">
 				<% if signed_in? %>
 					<li>
+<<<<<<< HEAD
 						<%= link_to current_user.name, "profile" , class: "nav-link-font nav-auth" %>
+=======
+						<%= link_to current_user.email, "profile" , class: "nav-link-font nav-auth" %>
+>>>>>>> f4246cd124fcb9d2a58e2a9808ccdab0ac0b1c86
 					</li>
 					<li class=" av-link-font nav-auth ">
 						<%= link_to "logout", destroy_user_session_path, method: :delete  %>
