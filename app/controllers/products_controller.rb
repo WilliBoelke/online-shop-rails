@@ -2,7 +2,7 @@ class ProductsController < ApplicationController
   include ProductsHelper
   before_action :authenticate_user!, except: [:index, :show]
   before_action :set_product, only: [:show, :edit, :update, :destroy]
-
+  load_and_authorize_resource
   # GET /products
   def index
      @products ||= Product.new_to_old
