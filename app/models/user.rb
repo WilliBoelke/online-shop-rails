@@ -5,6 +5,12 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable, :confirmable
 
+  after_create :assign_default_role
+
+  def assign_default_role
+    self.add_role('client') if self.roles.blank?
+  end
+
   def admin?
     has_role?(:admin)
   end
