@@ -10,7 +10,7 @@ class Ability
     elsif user.client?
       can :read, :all
     else
-      can :read, :all
+      can :read, Product
     end
   end
 end
