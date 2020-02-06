@@ -24,7 +24,7 @@ class RoleTest < ActiveSupport::TestCase
                              password_confirmation: "Password42")
     @testUser2.add_role "client"
   end
-  
+
   test "user has role admin" do
     assert @testUser1.admin?
   end

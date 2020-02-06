@@ -47,6 +47,8 @@ gem "bootstrap", "~> 4.3", ">= 4.3.1"
 gem "jquery-rails"
 
 group :development, :test do
+  # Letter Opener
+  gem "letter_opener", :group => :development
   # Use sqlite3 as the database for Active Record
   gem "sqlite3"
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
