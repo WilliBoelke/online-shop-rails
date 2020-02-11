@@ -15,4 +15,22 @@ class ApplicationController < ActionController::Base
       devise_parameter_sanitizer.permit(:sign_up, keys: [:name, :surname, :email, :password, :password_confirmation])
       devise_parameter_sanitizer.permit(:account_update, keys: [:name, :surname, :email, :password, :password_confirmation, :current_password])
     end
+  before_action :set_locale
+
+    # Managing the Locale across Requests
+    def set_locale
+      I18n.locale = cookies[:locale]
+    end
+
+  def dark
+    cookies[:dark] = {
+        value: "dark mode on"
+    }
+    redirect_back(fallback_location: root_path)
+  end
+
+  def light
+    cookies.delete(:dark)
+    redirect_back(fallback_location: root_path)
+  end
 end

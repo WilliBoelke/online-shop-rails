@@ -1,4 +1,4 @@
-<%= stylesheet_link_tag 'shop_system', media:'all', 'data-turbolinks-track': 'reload' %>
+
 <div class="container">
 	<div class="inner">	
 		<p id="notice"><%= notice %></p>
@@ -10,17 +10,17 @@
 		<%= image_tag(@product.picture, width:'500', :style => "border: 1px solid black" )%>
 		
 		<p>
-			<strong>Price:</strong>
+			<strong><%= t "products.show.price" %>:</strong>
 			<%= @product.price %> €
 		</p>
 
 		<p>
-			<strong>Typ:</strong>
+			<strong><%= t "products.show.type" %>:</strong>
 			<%= @product.cloth_type %>
 		</p>
 		
 		<p>
-			<strong>Description:</strong>
+			<strong><%= t "products.show.description" %>:</strong>
 			<%= @product.description %>
 		</p>
 	

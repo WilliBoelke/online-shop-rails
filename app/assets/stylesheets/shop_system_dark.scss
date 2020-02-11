@@ -1,0 +1,55 @@
+@import "application_dark";
+
+.item_link{
+  color: $font_color_dark;
+  text-decoration:none;
+
+  &:hover {
+    color: $accent_color_dark;
+    text-decoration: none;
+  }
+}
+.ice{
+
+}
+.col-md-4_edit{
+  text-align: center;
+  padding: 5px;
+}
+.inner{
+  border:solid 2px rgba(255,255,255,0.5);
+  background-color:rgba(47,79,79,0.7);
+  text-align:center;
+  margin: 5px;
+  padding: 8px;
+}
+.product_picture{
+  height: 250px;
+  border: 1px solid $accent_color_dark;
+}
+.new_form{
+  text-align:center;
+  border:solid 5px white;
+  padding:5px;
+  background-color:rgba(47,79,79,0.6);
+}
+.edit_form{
+  text-align:center;
+  border:solid 5px white;
+  padding:5px;
+  background-color:rgba(47,79,79,0.6);
+}
+.dl-horizontal_edit{
+  color: #f3fff5;
+  text-align: left;
+}
+.row_edit{
+  width:100%;
+}
+.container-fluid_edit{
+  text-align: center;
+}
+.btn-info{
+  background-color:$font_color_dark ;
+}
+

@@ -142,7 +142,7 @@ GEM
       guard (~> 2.0)
       rubocop (~> 0.20)
     highline (2.0.3)
-    i18n (1.8.2)
+    i18n (1.7.0)
       concurrent-ruby (~> 1.0)
     i18n-tasks (0.9.30)
       activesupport (>= 4.0.2)

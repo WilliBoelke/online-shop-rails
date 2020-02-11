@@ -1,0 +1,50 @@
+de:
+  static_pages: 
+    about:
+      titel: "Über uns"
+      subtitel: "Wir sind lorem ipsum dolor sit ametet dolore magna aliqua. Ut enim ad mino laboris nisi ut aliquip ex ea commodo
+				consequat."
+      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+              magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+              consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
+              laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+              ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+              magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+              consequat. Excepteur sint occaecat cupidatat non proident."
+    help:
+      titel: "Brauchst du hilfe ?" 
+      subtitel: "Hier findest du einige häufig gefragte Fragen:"
+    contact: 
+      titel: "Hier kannst du uns erreichen"
+      subtitel: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+              magna aliqua."
+
+  layouts:
+    header:
+      shop: "Laden"
+      recent: "Zuletzt"
+      cart: "Warenkorb"
+      settings: "Einstellungen"
+      languages: "Sprachen"
+      german: "Deutsch"
+      english: "Englisch"
+    footer:
+      shop: "Laden"
+      recent: "Zuletzt"
+      cart: "Warenkorb"
+      about: "Über uns"
+      contact: "Kontakt"
+      help: "Hilfe" 
+  
+  products:
+    index:
+      filter: 
+      oldnew: "Alt bis neu"
+      newfirst: "Neuste zuerst"
+      priceup: "Peis aufsteigend"
+      pricedown: "Peis absteigend"
+      alphabetical: "Alphabetisch"
+    show:
+      price: "Preis"
+      type: "Typ"
+      description: "Beschreibung"

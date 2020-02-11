@@ -1,3 +1,9 @@
+<% if cookies[:dark] %>
+	<%= stylesheet_link_tag 'application_dark', media: 'all', 'data-turbolinks-track': 'reload' %>
+<% else %>
+	<%= stylesheet_link_tag 'application_light', media: 'all', 'data-turbolinks-track': 'reload' %>
+<% end %>
+
 <div class="container-fluid text-center text-md-left background-dark">
 	<div class="row">
 		<div class="col-md-6 mt-md-0 mt-3">
@@ -16,13 +22,13 @@
 			<h1 class="nav-h2">About Us</h1>
 			<ul class="list-unstyled">
 				<li>
-					<%= link_to "about", about_path, class: "nav-link-font" %>
+					<%= link_to (t "layouts.footer.about"), about_path, class: "nav-link-font" %>
 				</li>
 				<li>
-					<%= link_to "contact", contact_path, class: "nav-link-font" %>
+					<%= link_to (t "layouts.footer.contact"), contact_path, class: "nav-link-font" %>
 				</li>
 				<li>
-					<%= link_to "help", help_path, class: "nav-link-font" %>
+					<%= link_to (t "layouts.footer.help"), help_path, class: "nav-link-font" %>
 				</li>
 			</ul>
 		</div>
@@ -30,13 +36,13 @@
 			<h1 class="nav-h2">Navigation</h1>
 			<ul class="list-unstyled">
 				<li>
-					<%= link_to "Shop", shop_path, class: "nav-link-font" %>
+					<%= link_to (t "layouts.footer.shop"), shop_path, class: "nav-link-font" %>
 				</li>
 				<li>
-					<%= link_to "Zuletzt", shop_path, class: "nav-link-font" %>
+					<%= link_to (t "layouts.footer.recent"), shop_path, class: "nav-link-font" %>
 				</li>
 				<li>
-					<%= link_to "Warenkorb", shop_path, class: "nav-link-font" %>
+					<%= link_to (t "layouts.footer.cart"), shop_path, class: "nav-link-font" %>
 				</li>
 			</ul>
 		</div>

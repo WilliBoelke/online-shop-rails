@@ -5,14 +5,16 @@
     <title>BelegarbeitRor</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
-		<%= stylesheet_link_tag 'custom', media: 'all', 'data-turbolinks-track': 'reload' %>
-		<%= stylesheet_link_tag 'shop_system', media:'all', 'data-turbolinks-track': 'reload' %>
-    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+		
+		<% if cookies[:dark] %>
+			<%= stylesheet_link_tag 'application_dark', media: 'all', 'data-turbolinks-track': 'reload' %>
+		<% else %>
+			<%= stylesheet_link_tag 'application_light', media: 'all', 'data-turbolinks-track': 'reload' %>
+		<% end %>
   </head>
 
-  <body class="ice">
+  <body class="ice body">
 		<%= render "layouts/header" %>
 		<p class="notice"><%= notice %></p>
 		<p class="alert"><%= alert %></p>
