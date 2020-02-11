@@ -1,33 +1,47 @@
-# Files in the config/locales directory are used for internationalization
-# and are automatically loaded by Rails. If you want to use locales other
-# than English, add the necessary files in this directory.
-#
-# To use the locales, use `I18n.t`:
-#
-#     I18n.t 'hello'
-#
-# In views, this is aliased to just `t`:
-#
-#     <%= t('hello') %>
-#
-# To use a different locale, set it with `I18n.locale`:
-#
-#     I18n.locale = :es
-#
-# This would use the information in config/locales/es.yml.
-#
-# The following keys must be escaped otherwise they will not be retrieved by
-# the default I18n backend:
-#
-# true, false, on, off, yes, no
-#
-# Instead, surround them with single quotes.
-#
-# en:
-#   'true': 'foo'
-#
-# To learn more, please read the Rails Internationalization guide
-# available at https://guides.rubyonrails.org/i18n.html.
-
 en:
-  hello: "Hello world"
+  static_pages:
+    about:
+      titel: "About us"
+      subtitel: "We are lorem ipsum dolor sit ametet dolore magna aliqua. Ut enim ad mino laboris nisi ut aliquip ex ea commodo consequat."
+      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+              magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+              consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
+              laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+              ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+    help:
+      titel: "Need help ?"
+      subtitel: "Here are some frequently asked questions:"
+    contact:
+      titel: "Contact us"
+      subtitel: "lorem ipsum dolor sit ametet dolore magna aliqua."
+
+  layouts:
+    header:
+      shop: "Shop"
+      recent: "Recent"
+      cart: "Cart"
+      settings: "Settings"
+      languages: "Languages"
+      german: "German"
+      english: "English"
+    footer:
+      shop: "Shop"
+      recent: "Recent"
+      cart: "Cart"
+      about: "About"
+      contact: "Contact"
+      help: "Help" 
+        
+  products:
+    index:
+      filter:
+      oldnew: "from old to new"
+      newfirst: "Newest first"
+      priceup: "Price descending"
+      pricedown: "Price ascending"
+      alphabetical: "Alphabetical"
+    show:
+      price: "Price"
+      type: "Type"
+      description: "Description"
+      
