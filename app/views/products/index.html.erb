@@ -28,11 +28,11 @@
 					<%= @label_o %>
 				</button>
 				<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-					<%= link_to (t "products.index.oldnew"), filter_path(order_scope: :OLD_TO_NEW, filter_scope: @filter_scope), class:"dropdown-item" %>
-					<%= link_to (t "products.index.newfirst"), filter_path(order_scope: :NEW_TO_OLD, filter_scope: @filter_scope), class:"dropdown-item" %>
-					<%= link_to (t "products.index.pricedown"), filter_path(order_scope: :HIGH_TO_LOW, filter_scope: @filter_scope), class:"dropdown-item" %>
-					<%= link_to (t "products.index.priceupAlphabetisch"), filter_path(order_scope: :LOW_TO_HIGH, filter_scope: @filter_scope), class:"dropdown-item" %>
-					<%= link_to (t "products.index.alphabetical"), filter_path(order_scope: :ALPHABETIC, filter_scope: @filter_scope), class:"dropdown-item" %>
+					<%= link_to "Alt bis neu", filter_path(order_scope: :OLD_TO_NEW, filter_scope: @filter_scope), class: "dropdown-item" %>
+					<%= link_to "Neuste zuerst", filter_path(order_scope: :NEW_TO_OLD, filter_scope: @filter_scope), class: "dropdown-item" %>
+					<%= link_to "Preis absteigend", filter_path(order_scope: :HIGH_TO_LOW, filter_scope: @filter_scope), class: "dropdown-item" %>
+					<%= link_to "Preis aufsteigend", filter_path(order_scope: :LOW_TO_HIGH, filter_scope: @filter_scope), class: "dropdown-item" %>
+					<%= link_to "Alphabetisch", filter_path(order_scope: :ALPHABETIC, filter_scope: @filter_scope), class: "dropdown-item" %>
 				</div>
 			</div>
 		</div>
@@ -51,27 +51,24 @@
 			</div>
 		</div>
 	</div>
-<!-- Aussen Container -->
-<div class="container">
-	<% i=0 %>
-	<!--- Produkte angeordnet ---->
-6	<% @products.each do |product| %>
-		<% if i==0 %>
-			<!-- Reihen-Container -->
-			<div class="row row_edit">
-		<% end %>
-				<!-- Product-Container outter -->
-				<div class="col-md-4 col-md-4_edit">
-					<!-- Product-Container inner -->
-					<div class="inner">
-						<!-- Link zu Show Seite -->
-						<%= link_to product, class:"item_link" do %>
-							<!-- Product-Name -->
-							<h2><%= product.name %></h2>
-							<br>
-							<!-- Product-Picture -->
-							<%= image_tag(product.picture, class:"product_picture") %>
-						<% end %>
+
+	<!-- Aussen Container -->
+	<div class="container">
+		<% i = 0 %>
+		<!--- Produkte angeordnet ---->
+		<% @products.each do |product| %>
+			<% if i == 0 %>
+				<!-- Reihen-Container -->
+				<div class="row row_edit">
+			<% end %>
+			<!-- Product-Container outter -->
+			<div class="col-md-4 col-md-4_edit">
+				<!-- Product-Container inner -->
+				<div class="inner">
+					<!-- Link zu Show Seite -->
+					<%= link_to product, class: "item_link" do %>
+						<!-- Product-Name -->
+						<h2><%= product.name %></h2>
 						<br>
 						<!-- Product-Picture -->
 						<%= image_tag(product.picture, class: "product_picture") %>
