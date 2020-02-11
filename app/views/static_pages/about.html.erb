@@ -1,3 +1,9 @@
+<% if cookies[:dark] %>
+	<%= stylesheet_link_tag 'static_pages_dark', media: 'all', 'data-turbolinks-track': 'reload' %>
+<% else %>
+	<%= stylesheet_link_tag 'static_pages_light', media: 'all', 'data-turbolinks-track': 'reload' %>
+<% end %>
+
 <div id="about" class="container-fluid">
 	<div class="row">
 		<div class="col-sm-8">
@@ -8,5 +14,7 @@
 			<br>
 			<p><%= t "static_pages.about.text"%></p>
 		</div>
-	</div>
 </div>
+
+
+

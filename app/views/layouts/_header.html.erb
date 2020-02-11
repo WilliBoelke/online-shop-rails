@@ -1,3 +1,8 @@
+<% if cookies[:dark] %>
+	<%= stylesheet_link_tag 'nav_bar_dark', media: 'all', 'data-turbolinks-track': 'reload' %>
+<% else %>
+	<%= stylesheet_link_tag 'nav_bar_light', media: 'all', 'data-turbolinks-track': 'reload' %>
+<% end %>
 <nav class="navbar navbar-expand-md background-dark sticky-top">
 	<div class="container-fluid">
 		<div class="branding">
@@ -52,6 +57,21 @@
 									<%= link_to_unless_current t('layouts.header.english'), locale_path(locale: 'en'), method: :post, class: 'dropdown-item' %>
 								</li>
 							</ul>
+						</div>
+					</div>
+				</li>
+				<li class="nav-item">
+					<div class="dropdown">
+						<button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+										aria-haspopup="true" aria-expanded="false">
+							Setting
+						</button>
+						<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+							<% if cookies[:dark] %>
+								<%= button_to 'Light Mode', light_path %>
+							<% else %>
+								<%= button_to 'Dark Mode', dark_path %>
+							<% end %>
 						</div>
 					</div>
 				</li>
