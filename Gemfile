@@ -1,6 +1,15 @@
 
 # frozen_string_literal: true
 
+source "https://rubygems.org"
+git_source(:github) { |repo| "https://github.com/#{repo}.git" }
+ruby "2.6.5"
+# Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
+gem "rails", "~> 6.0.1"
+# User  creation
+gem "devise"
+# env file for email credentials
+gem "dotenv-rails"
 #
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby "2.6.5"
@@ -12,6 +21,12 @@ gem "devise"
 gem "puma", "~> 4.3"
 # Use SCSS for stylesheets
 gem "sass-rails", ">= 6"
+# admin users / user authorization
+gem "cancancan"
+# user roles
+gem "rolify"
+#
+gem "font-awesome-sass", "~> 5.11.2"
 # Transpile app-like JavaScript. Read more: https://github.com/rails/webpacker
 gem "webpacker", "~> 4.0"
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
@@ -35,10 +50,12 @@ gem "tzinfo-data"
 # Bootstrap, a CSS framework that makes it easy to add nice web design
 # and user interface elements to an HTML5 application
 gem "bootstrap", "~> 4.3", ">= 4.3.1"
-
+gem 'sendgrid-ruby'
 gem "jquery-rails"
 
 group :development, :test do
+  # Preview email in the default browser instead of sending it.
+  gem "letter_opener", :group => :development
   # Use sqlite3 as the database for Active Record
   gem "sqlite3"
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -108,3 +125,8 @@ group :test do
   # Speedup RSpec + Cucumber by running parallel on multiple CPU cores
   gem "parallel_tests"
 end
+
+group :production do
+  gem "pg"
+end
+

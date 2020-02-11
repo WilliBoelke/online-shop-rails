@@ -1,9 +1,11 @@
 Rails.application.routes.draw do
-  
   scope '(:locale)', locale: /#{I18n.available_locales.join("|")}/ do
   root 'products#index'
   resources :products
-
+    
+  devise_for :user, :path => '', :path_names => {
+    :sign_in => "login", :sign_out => "logout", :sign_up => "register" ,  edit: 'profile' }
+    
     #shop
     get "shop" => "products#index", as: "shop"
     get "sort" => "products#sort", as: "sort"
@@ -18,7 +20,6 @@ Rails.application.routes.draw do
     #darkmode
     post 'dark' => 'application#dark', as: :dark
     post 'light' => 'application#light', as: :light
-    
     
     post 'locale', to: 'locales#update'
 end

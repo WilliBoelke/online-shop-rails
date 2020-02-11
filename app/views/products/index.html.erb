@@ -1,10 +1,8 @@
-<p id="notice"><%= notice %></p>
-
 <!--- Dropdown Menues --->
- <div class="container">
+<div class="container">
 	<div class="d-flex flex-row-reverse">
-		
-		
+
+
 		<!--- Dropdown Menue fuer Produktanordnung --->
 		<div class="p-2">
 		</div>
@@ -18,7 +16,7 @@
 				<div class="input-group">
 					<%= search_field_tag :search, params[:search], placeholder: "Search", class: "form-control" %>
 					<div class="input-group-btn">
-						<%= button_tag "go", :class => 'btn btn-info',:name => nil%>
+						<%= button_tag "go", :class => 'btn btn-info', :name => nil %>
 					</div>
 				</div>
 			<% end %>
@@ -46,14 +44,13 @@
 					<%= @label_f %>
 				</button>
 				<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-					<%= link_to "Alle", filter_path(filter_scope: :ALL_CLOTHES, order_scope: @order_scope), class:"dropdown-item" %>
-					<%= link_to "T-Shirts", filter_path(filter_scope: :T_SHIRTS, order_scope: @order_scope), class:"dropdown-item" %>
-					<%= link_to "Pullover", filter_path(filter_scope: :PULLOVER, order_scope: @order_scope), class:"dropdown-item" %>
+					<%= link_to "Alle", filter_path(filter_scope: :ALL_CLOTHES, order_scope: @order_scope), class: "dropdown-item" %>
+					<%= link_to "T-Shirts", filter_path(filter_scope: :T_SHIRTS, order_scope: @order_scope), class: "dropdown-item" %>
+					<%= link_to "Pullover", filter_path(filter_scope: :PULLOVER, order_scope: @order_scope), class: "dropdown-item" %>
 				</div>
 			</div>
 		</div>
-</div>
-
+	</div>
 <!-- Aussen Container -->
 <div class="container">
 	<% i=0 %>
@@ -76,55 +73,66 @@
 							<%= image_tag(product.picture, class:"product_picture") %>
 						<% end %>
 						<br>
+						<!-- Product-Picture -->
+						<%= image_tag(product.picture, class: "product_picture") %>
+					<% end %>
+					<br>
+					<br>
+					<dl class="dl-horizontal dl-horizontal_edit">
+						<!-- Preis -->
+						<dt>Preis:</dt>
+						<dd><%= product.price %> €</dd>
+						<!-- Typ -->
+						<dt>Typ:</dt>
+						<dd><%= product.cloth_type %></dd>
+						<!-- Bechreibung -->
+						<dt>Beschreibung:</dt>
+						<dd><%= product.description %></dd>
+					</dl>
+					<br>
+					<div style="text-align: center;">
+						<!--- cart.add verlinken --->
+						<i class="fas fa-cart-plus fa-4x"></i>
+						<!--- watchlist.add verlinken --->
+						<i class="fas fa-clock fa-4x"></i>
 						<br>
-						<dl class="dl-horizontal dl-horizontal_edit">
-							<!-- Preis -->
-							<dt>Preis:</dt> 
-							<dd><%= product.price %> €</dd>
-							<!-- Typ -->
-							<dt>Typ:</dt>
-							<dd><%= product.cloth_type %></dd>
-							<!-- Bechreibung -->
-							<dt>Beschreibung:</dt> 
-							<dd><%= product.description %></dd>
-						</dl>
 						<br>
-						<div style="text-align: center;">
-							<!--- cart.add verlinken --->
-							<i class="fas fa-cart-plus fa-4x"></i>
-							<!--- watchlist.add verlinken --->
-							<i class="fas fa-clock fa-4x"></i>
-							<br>
-							<br>
-							<!-- Edit für Admin (Rechte müssen noch implementiert werden) -->
-							<%= link_to edit_product_path(product), class:"item_link" do %>
+						<!-- Edit für Admin -->
+						<% if current_user && current_user.has_role?(:admin) %>
+							<%= link_to edit_product_path(product), class: "item_link" do %>
 								<i class="fas fa-edit fa-2x"></i>
 							<% end %>
-							<!-- Delete für Admin (Rechte müssen noch implementiert werden)  -->
-							<%= link_to product, class:"item_link", method: :delete, data: { confirm: 'Are you sure?' } do %>
+						<% end %>
+
+						<!-- Delete für Admin-->
+						<% if current_user && current_user.has_role?(:admin) %>
+							<%= link_to product, class: "item_link", method: :delete, data: {confirm: 'Are you sure?'} do %>
 								<i class="fas fa-trash fa-2x"></i>
 							<% end %>
-							<br>
-							<br>
-						</div>
+						<% end %>
+						<br>
+						<br>
 					</div>
 				</div>
-		<% if i==2 %>
-			<% i=0 %>
 			</div>
-		<% else %>
-			<% i=i+1 %>
+			<% if i == 2 %>
+				<% i = 0 %>
+				</div>
+			<% else %>
+				<% i = i + 1 %>
+			<% end %>
 		<% end %>
-	<% end %>
-	<% if i!=3 %>
+		<% if i != 3 %>
+			</div>
+		<% end %>
+		<!--- Neues Produkt für Admin--->
+		<% if current_user && current_user.has_role?(:admin) %>
+			<div class="container-fluid container-fluid_edit">
+				<%= link_to new_product_path, class: "item_link" do %>
+					<i class="fas fa-plus fa-4x"></i>
+				<% end %>
+		<% end %>
 		</div>
-	<% end %>
-	<!--- Neues Produkt für Admin (Rechte müssen noch implementiert werden) --->
-	<div class="container-fluid container-fluid_edit">
-		<%= link_to new_product_path, class:"item_link" do%>
-			<i class="fas fa-plus fa-4x"></i>
-		<% end %>
-	</div>
-	<br>
-	<br>
-</div>
+		<br>
+		<br>
+		</div>
