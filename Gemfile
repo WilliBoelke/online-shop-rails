@@ -43,11 +43,11 @@ gem "tzinfo-data"
 # Bootstrap, a CSS framework that makes it easy to add nice web design
 # and user interface elements to an HTML5 application
 gem "bootstrap", "~> 4.3", ">= 4.3.1"
-
+gem 'sendgrid-ruby'
 gem "jquery-rails"
 
 group :development, :test do
-  # Letter Opener
+  # Preview email in the default browser instead of sending it.
   gem "letter_opener", :group => :development
   # Use sqlite3 as the database for Active Record
   gem "sqlite3"
@@ -93,8 +93,6 @@ group :development do
   gem "rubocop-rails_config", require: false
   # i18n-tasks helps you find and manage missing and unused translations
   gem "i18n-tasks", require: false
-  # Preview email in the default browser instead of sending it.
-  gem "letter_opener"
   gem "redis", "~> 3.0.1"
   # gem 'hiredis', '~> 0.4.5'
   gem "popper_js", "~> 1.11", ">= 1.11.1"

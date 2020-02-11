@@ -287,6 +287,7 @@ GEM
       rubocop-rails (~> 2.0)
     ruby-progressbar (1.10.1)
     ruby_dep (1.5.0)
+    ruby_http_client (3.3.0)
     rubyzip (2.0.0)
     sass-rails (6.0.0)
       sassc-rails (~> 2.1, >= 2.1.1)
@@ -303,6 +304,8 @@ GEM
     selenium-webdriver (3.142.7)
       childprocess (>= 0.5, < 4.0)
       rubyzip (>= 1.2.2)
+    sendgrid-ruby (6.0.4)
+      ruby_http_client (~> 3.3.0)
     shellany (0.0.1)
     shoulda-matchers (4.2.0)
       activesupport (>= 4.2.0)
@@ -408,6 +411,7 @@ DEPENDENCIES
   rubocop-rails_config
   sass-rails (>= 6)
   selenium-webdriver
+  sendgrid-ruby
   shoulda-matchers
   simplecov
   spring
