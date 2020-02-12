@@ -1,0 +1,2 @@
+module AppearanceHelper
+end

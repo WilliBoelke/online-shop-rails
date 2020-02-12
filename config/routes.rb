@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+
   scope '(:locale)', locale: /#{I18n.available_locales.join("|")}/ do
     root 'products#index'
     resources :products
@@ -17,10 +18,14 @@ Rails.application.routes.draw do
     get "contact" => "static_pages#contact", as: "contact"
     get "help" => "static_pages#help", as: "help"
 
-    #darkmode
-    post 'dark' => 'application#dark', as: :dark
-    post 'light' => 'application#light', as: :light
-
     post 'locale', to: 'locales#update'
+
+    #darkmode
+    post "dark", to: "appearance#dark", as: "dark"
+    post "light", to: "appearance#light", as: "light"
+
   end
+
+
+
 end
