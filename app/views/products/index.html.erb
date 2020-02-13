@@ -1,8 +1,11 @@
+<% if cookies[:dark] %>
+	<%= stylesheet_link_tag 'shop_system_dark', media: 'all', 'data-turbolinks-track': 'reload' %>
+<% else %>
+	<%= stylesheet_link_tag 'shop_system_light', media: 'all', 'data-turbolinks-track': 'reload' %>
+<% end %>
 <!--- Dropdown Menues --->
 <div class="container">
 	<div class="d-flex flex-row-reverse">
-
-
 		<!--- Dropdown Menue fuer Produktanordnung --->
 		<div class="p-2">
 		</div>
