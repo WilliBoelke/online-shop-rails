@@ -25,6 +25,8 @@ gem "webpacker", "~> 4.0"
 gem "turbolinks", "~> 5"
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem "jbuilder", "~> 2.7"
+# Translate routes
+gem "route_translator"
 # gem for placeholder/fake content of the static pages
 # gem 'faker', :git => 'https://github.com/faker-ruby/faker.git', :branch => 'master'
 # Use Redis adapter to run Action Cable in production
@@ -90,8 +92,6 @@ group :development do
   # RuboCop configuration which has the same code style checking as official Ruby on Rails
   gem "guard-rubocop", require: false
   gem "rubocop-rails_config", require: false
-  # Translate routes
-  gem "route_translator"
   # i18n-tasks helps you find and manage missing and unused translations
   gem "i18n-tasks", require: false
   # Preview email in the default browser instead of sending it.
