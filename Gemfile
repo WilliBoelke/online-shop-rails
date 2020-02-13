@@ -1,4 +1,3 @@
-
 # frozen_string_literal: true
 
 source "https://rubygems.org"
@@ -10,13 +9,6 @@ gem "rails", "~> 6.0.1"
 gem "devise"
 # env file for email credentials
 gem "dotenv-rails"
-#
-git_source(:github) { |repo| "https://github.com/#{repo}.git" }
-ruby "2.6.5"
-# Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem "rails", "~> 6.0.1.rc1"
-# User  creation
-gem "devise"
 # Use Puma as the app server
 gem "puma", "~> 4.3"
 # Use SCSS for stylesheets
@@ -50,12 +42,12 @@ gem "tzinfo-data"
 # Bootstrap, a CSS framework that makes it easy to add nice web design
 # and user interface elements to an HTML5 application
 gem "bootstrap", "~> 4.3", ">= 4.3.1"
-gem 'sendgrid-ruby'
+gem "sendgrid-ruby"
 gem "jquery-rails"
 
 group :development, :test do
   # Preview email in the default browser instead of sending it.
-  gem "letter_opener", :group => :development
+  gem "letter_opener", group: :development
   # Use sqlite3 as the database for Active Record
   gem "sqlite3"
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -98,6 +90,8 @@ group :development do
   # RuboCop configuration which has the same code style checking as official Ruby on Rails
   gem "guard-rubocop", require: false
   gem "rubocop-rails_config", require: false
+  # Translate routes
+  gem "route_translator"
   # i18n-tasks helps you find and manage missing and unused translations
   gem "i18n-tasks", require: false
   # Preview email in the default browser instead of sending it.
@@ -129,4 +123,3 @@ end
 group :production do
   gem "pg"
 end
-

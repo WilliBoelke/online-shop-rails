@@ -268,6 +268,10 @@ GEM
       actionpack (>= 5.0)
       railties (>= 5.0)
     rolify (5.2.0)
+    route_translator (7.1.1)
+      actionpack (>= 5.0.0.1, < 6.1)
+      activesupport (>= 5.0.0.1, < 6.1)
+      addressable (~> 2.7)
     rubocop (0.79.0)
       jaro_winkler (~> 1.5.1)
       parallel (~> 1.10)
@@ -408,6 +412,7 @@ DEPENDENCIES
   rails-controller-testing
   redis (~> 3.0.1)
   rolify
+  route_translator
   rubocop-rails_config
   sass-rails (>= 6)
   selenium-webdriver

@@ -22,6 +22,7 @@ en:
       cart: "Cart"
       settings: "Settings"
       languages: "Languages"
+      account: "Account"
       german: "German"
       english: "English"
     footer:

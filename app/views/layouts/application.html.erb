@@ -1,24 +1,24 @@
 <!DOCTYPE html>
 <html lang="de">
 <html>
-  <head>
-    <title>BelegarbeitRor</title>
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
-    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
-		
-		<% if cookies[:dark] %>
-			<%= stylesheet_link_tag 'application_dark', media: 'all', 'data-turbolinks-track': 'reload' %>
-		<% else %>
-			<%= stylesheet_link_tag 'application_light', media: 'all', 'data-turbolinks-track': 'reload' %>
-		<% end %>
-  </head>
+<head>
+	<title>BelegarbeitRor</title>
+	<%= csrf_meta_tags %>
+	<%= csp_meta_tag %>
+	<%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
 
-  <body class="ice body">
-		<%= render "layouts/header" %>
-		<p class="notice"><%= notice %></p>
-		<p class="alert"><%= alert %></p>
-    <%= yield %>
-		<%= render "layouts/footer" %>
-  </body>
+	<% if cookies[:dark] %>
+		<%= stylesheet_link_tag 'application_dark', media: 'all', 'data-turbolinks-track': 'reload' %>
+	<% else %>
+		<%= stylesheet_link_tag 'application_light', media: 'all', 'data-turbolinks-track': 'reload' %>
+	<% end %>
+</head>
+
+<body class="ice body">
+<%= render "layouts/header" %>
+<p class="notice"><%= notice %></p>
+<p class="alert"><%= alert %></p>
+<%= yield %>
+<%= render "layouts/footer" %>
+</body>
 </html>

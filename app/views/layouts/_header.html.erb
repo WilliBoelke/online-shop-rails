@@ -5,12 +5,17 @@
 <% end %>
 <nav class="navbar navbar-expand-md background-dark sticky-top">
 	<div class="container-fluid">
+		
+		<!--Branding/Logo-->
 		<div class="branding">
 			<%= link_to "onlineshop", shop_path, class: "branding" %>
 		</div>
+		<!--Navigation Dropdown (Snmaller Screens)-->
 		<button class="navbar-toggler navbar-dark" type="button" data-toggle="collapse" data-target="#navbarResposive">
 			<span class="navbar-toggler-icon"></span>
 		</button>
+
+		<!--Navigation Links-->
 		<div class="collapse navbar-collapse" id="navbarResposive">
 			<ul class="navbar-nav ml-auto">
 				<li class="nav-item">
@@ -29,23 +34,37 @@
 						<button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 							<%= t "layouts.header.settings" %>
 						</button>
-						<div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
+						<div class="dropdown-menu dropdown-menu-right dropdown-color" aria-labelledby="dropdownMenuButton">
 							<ul>
-								<!--Darkmode Toggle-->
-								<br>
+								
+								<!--Account Settings-->
+								<p class="h6">
+									<%= t ('layouts.header.account') %>
+									<br>
+								<li>
+									<% if signed_in? %>
+										<%= link_to current_user.name, "profile", class: "dropdown-item" %>
+									<% else %>
+										<%= link_to "Register", new_user_registration_path, class: "dropdown-item" %>
+										<%= link_to "Login", new_user_session_path, class: "dropdown-item" %>
+									<% end %>
+								</li>
+								<p>
+									
+									<!--Darkmode Toggle-->
 								<p class="h6">
 									<%= t ('layouts.header.appearance') %>
 									<br>
-								<p>
 								<li>
 									<% if cookies[:dark] %>
-										<%= link_to 'Light Mode', class: 'dropdown-item' %>
+										<%= button_to 'Light Mode', light_path, class: 'dropdown-item' %>
 									<% else %>
-										<%= link_to 'Dark Mode', class: 'dropdown-item' %>
+										<%= button_to 'Dark Mode', dark_path, class: 'dropdown-item' %>
 									<% end %>
 								</li>
-								<!--Languages-->
-								<br>
+								<p>
+									
+									<!--Languages-->
 								<p class="h6">
 									<%= t ('layouts.header.languages') %>
 									<br>
@@ -60,38 +79,6 @@
 						</div>
 					</div>
 				</li>
-				<li class="nav-item">
-					<div class="dropdown">
-						<button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
-										aria-haspopup="true" aria-expanded="false">
-							Setting
-						</button>
-						<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-							<% if cookies[:dark] %>
-								<%= button_to 'Light Mode', light_path %>
-							<% else %>
-								<%= button_to 'Dark Mode', dark_path %>
-							<% end %>
-						</div>
-					</div>
-				</li>
-			</ul>
-			<ul class="right navbar-nav">
-				<% if signed_in? %>
-					<li>
-						<%= link_to current_user.name, "profile" , class: "nav-link-font nav-auth" %>
-					</li>
-					<li class=" av-link-font nav-auth ">
-						<%= link_to "logout", destroy_user_session_path, method: :delete  %>
-					</li>
-				<% else %>
-					<li>
-						<%= link_to "Register", new_user_registration_path , class: "nav-link-font nav-auth"%>
-					</li>
-					<li>
-						<%= link_to "Login", new_user_session_path , class: "nav-link-font nav-auth"%>
-					</li>
-				<% end %>
 			</ul>
 		</div>
 	</div>

@@ -3,7 +3,6 @@
 require "test_helper"
 
 class RoleTest < ActiveSupport::TestCase
-
   def setup
     ["admin", "support", "client"].each do |role_name|
       Role.create! name: role_name

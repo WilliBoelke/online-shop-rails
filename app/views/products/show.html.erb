@@ -1,14 +1,17 @@
-
+<% if cookies[:dark] %>
+	<%= stylesheet_link_tag 'shop_system_dark', media: 'all', 'data-turbolinks-track': 'reload' %>
+<% else %>
+	<%= stylesheet_link_tag 'shop_system_light', media: 'all', 'data-turbolinks-track': 'reload' %>
+<% end %>
 <div class="container">
-	<div class="inner">	
+	<div class="inner">
 		<p id="notice"><%= notice %></p>
-		
 		<p>
 			<h2><%= @product.name %></h2>
 		</p>
-		
-		<%= image_tag(@product.picture, width:'500', :style => "border: 1px solid black" )%>
-		
+
+		<%= image_tag(@product.picture, width: '500', :style => "border: 1px solid black") %>
+
 		<p>
 			<strong><%= t "products.show.price" %>:</strong>
 			<%= @product.price %> €
@@ -23,20 +26,19 @@
 			<strong><%= t "products.show.description" %>:</strong>
 			<%= @product.description %>
 		</p>
-	
 		<!--- warenkorb.add verlinken --->
 		<i class="fas fa-cart-plus fa-4x"></i>
 		<!--- warchlist.add verlinken --->
 		<i class="fas fa-clock fa-4x"></i>
 		<br>
 		<br>
-		<%= link_to products_path, class:"item_link" do%>
+		<%= link_to products_path, class: "item_link" do %>
 			<i class="fas fa-arrow-left fa-2x"></i>
 		<% end %>
-		<%= link_to edit_product_path(@product), class:"item_link" do %>
+		<%= link_to edit_product_path(@product), class: "item_link" do %>
 			<i class="fas fa-edit fa-2x"></i>
 		<% end %>
-		<%= link_to @product, class:"item_link", method: :delete, data: { confirm: 'Are you sure?' } do %>
+		<%= link_to @product, class: "item_link", method: :delete, data: {confirm: 'Are you sure?'} do %>
 			<i class="fas fa-trash fa-2x"></i>
 		<% end %>
 		<br>
