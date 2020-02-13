@@ -6,9 +6,8 @@
 <div class="container">
 	<div class="inner">
 		<p id="notice"><%= notice %></p>
-
 		<p>
-		<h2><%= @product.name %></h2>
+			<h2><%= @product.name %></h2>
 		</p>
 
 		<%= image_tag(@product.picture, width: '500', :style => "border: 1px solid black") %>
@@ -22,12 +21,11 @@
 			<strong><%= t "products.show.type" %>:</strong>
 			<%= @product.cloth_type %>
 		</p>
-
+		
 		<p>
 			<strong><%= t "products.show.description" %>:</strong>
 			<%= @product.description %>
 		</p>
-
 		<!--- warenkorb.add verlinken --->
 		<i class="fas fa-cart-plus fa-4x"></i>
 		<!--- warchlist.add verlinken --->

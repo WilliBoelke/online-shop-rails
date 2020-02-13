@@ -5,12 +5,17 @@
 <% end %>
 <nav class="navbar navbar-expand-md background-dark sticky-top">
 	<div class="container-fluid">
+		
+		<!--Branding/Logo-->
 		<div class="branding">
 			<%= link_to "onlineshop", shop_path, class: "branding" %>
 		</div>
+		<!--Navigation Dropdown (Snmaller Screens)-->
 		<button class="navbar-toggler navbar-dark" type="button" data-toggle="collapse" data-target="#navbarResposive">
 			<span class="navbar-toggler-icon"></span>
 		</button>
+
+		<!--Navigation Links-->
 		<div class="collapse navbar-collapse" id="navbarResposive">
 			<ul class="navbar-nav ml-auto">
 				<li class="nav-item">
@@ -31,20 +36,22 @@
 						</button>
 						<div class="dropdown-menu dropdown-menu-right dropdown-color" aria-labelledby="dropdownMenuButton">
 							<ul>
+								
 								<!--Account Settings-->
 								<p class="h6">
 									<%= t ('layouts.header.account') %>
 									<br>
 								<li>
 									<% if signed_in? %>
-										<%= link_to current_user.name, "profile" , class: "dropdown-item" %>
+										<%= link_to current_user.name, "profile", class: "dropdown-item" %>
 									<% else %>
-										<%= link_to "Register", new_user_registration_path , class: "dropdown-item"%>
-										<%= link_to "Login", new_user_session_path , class: "dropdown-item"%>
+										<%= link_to "Register", new_user_registration_path, class: "dropdown-item" %>
+										<%= link_to "Login", new_user_session_path, class: "dropdown-item" %>
 									<% end %>
 								</li>
 								<p>
-								<!--Darkmode Toggle-->
+									
+									<!--Darkmode Toggle-->
 								<p class="h6">
 									<%= t ('layouts.header.appearance') %>
 									<br>
@@ -56,7 +63,8 @@
 									<% end %>
 								</li>
 								<p>
-								<!--Languages-->
+									
+									<!--Languages-->
 								<p class="h6">
 									<%= t ('layouts.header.languages') %>
 									<br>

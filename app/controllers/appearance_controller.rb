@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class AppearanceController < ApplicationController
   def dark
     cookies[:dark] = {

@@ -1,7 +1,8 @@
+# frozen_string_literal: true
+
 require "test_helper"
 
 class AbilityTest < ActiveSupport::TestCase
-
   def setup
     ["admin", "support", "client"].each do |role_name|
       Role.create! name: role_name
@@ -21,7 +22,6 @@ class AbilityTest < ActiveSupport::TestCase
                              password: "Password42",
                              password_confirmation: "Password42")
     @testUser2.add_role "client"
-
   end
 
   # admin
@@ -77,5 +77,4 @@ class AbilityTest < ActiveSupport::TestCase
     ability = Ability.new(@testUser2)
     assert ability.can?(:read, Product.new)
   end
-
 end
