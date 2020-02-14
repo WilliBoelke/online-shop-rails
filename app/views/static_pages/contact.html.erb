@@ -1,9 +1,11 @@
 <% if cookies[:dark] %>
 	<%= stylesheet_link_tag 'static_pages_dark', media: 'all', 'data-turbolinks-track': 'reload' %>
+	<%= stylesheet_link_tag 'forms_dark', media: 'all', 'data-turbolinks-track': 'reload' %>
 <% else %>
 	<%= stylesheet_link_tag 'static_pages_light', media: 'all', 'data-turbolinks-track': 'reload' %>
+	<%= stylesheet_link_tag 'forms_light', media: 'all', 'data-turbolinks-track': 'reload' %>
 <% end %>
-<div id="contact" class="container-fluid bg-grey">
+<div id="contact" class="content-container ">
 	<br>
 	<h2><%= t "static_pages.contact.titel" %></h2>
 	<h4><%= t "static_pages.contact.subtitel" %></h4>
@@ -18,16 +20,20 @@
 		<div class="col-sm-7 slideanim">
 			<div class="row">
 				<div class="col-sm-6 form-group">
-					<input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+					<input class="form-control form-background" id="name" name="name" placeholder="Name" type="text" required>
 				</div>
 				<div class="col-sm-6 form-group">
-					<input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+					<input class="form-control form-background" id="email" name="email" placeholder="Email" type="email" required>
 				</div>
 			</div>
-			<textarea class="form-control" id="comments" name="comments" placeholder="Anliegen" rows="5"></textarea><br>
+			
+			<!--Input Textarea -->
+			<textarea class="form-control form-background" id="comments" name="comments" placeholder="Anliegen" rows="5"></textarea><br>
 			<div class="row">
+				
+				<!--Send Button -->
 				<div class="col-sm-12 form-group">
-					<button class="btn btn-default pull-right" type="submit">Send</button>
+					<button class="btn btn-default pull-right bg-success" type="submit">Send</button>
 				</div>
 			</div>
 		</div>

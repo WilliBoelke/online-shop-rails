@@ -1,56 +1,89 @@
-<h2>Edit <%= resource_name.to_s.humanize %></h2>
-<% if current_user && current_user.has_role?(:admin) %>
-	<h3>You are logged in as Admin</h3>
+<% if cookies[:dark] %>
+	<%= stylesheet_link_tag 'forms_dark', media: 'all', 'data-turbolinks-track': 'reload' %>
+<% else %>
+	<%= stylesheet_link_tag 'forms_light', media: 'all', 'data-turbolinks-track': 'reload' %>
 <% end %>
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: {method: :put}) do |f| %>
-	<%= devise_error_messages! %>
-	<div class="row">
-		<div class="form-group col-md-4">
-			<%= f.label :name %><br/>
-			<%= f.email_field :name, autofocus: true, class: "form-control" %>
-		</div>
-	</div>
-	<div class="row">
-		<div class="form-group col-md-4">
-			<%= f.label :surname %><br/>
-			<%= f.email_field :surname, class: "form-control" %>
-		</div>
-	</div>
-	<div class="row">
-		<div class="form-group col-md-4">
-			<%= f.label :email %><br/>
-			<%= f.email_field :email, class: "form-control" %>
-		</div>
-	</div>
-	<% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
-		<div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
+
+<div class="content-container">
+	<!--Header-->
+	<h2>Edit <%= resource_name.to_s.humanize %></h2>
+	<% if current_user && current_user.has_role?(:admin) %>
+		<h4>>>>You are logged in as Admin<<<</h4>
 	<% end %>
-	<div class="row">
-		<div class="form-group col-md-4">
-			<%= f.label :password %> <i>(leave blank if you don't want to change it)</i><br/>
-			<%= f.password_field :password, autocomplete: "off", class: "form-control" %>
-		</div>
-	</div>
-	<div class="row">
-		<div class="form-group col-md-4">
-			<%= f.label :password_confirmation %><br/>
-			<%= f.password_field :password_confirmation, autocomplete: "off", class: "form-control" %>
-		</div>
-	</div>
-	<div class="row">
-		<div class="form-group col-md-4">
-			<%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br/>
-			<%= f.password_field :current_password, autocomplete: "off", class: "form-control" %>
-		</div>
-	</div>
-	<div class="actions">
-		<%= f.submit "Update", class: "btn btn-primary" %>
-	</div>
-<% end %>
-<br>
-<br>
-<br>
-<h3>Cancel my account</h3>
+	<br>
+	<br>
 
-<p>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), data: {confirm: "Are you sure?"}, method: :delete, class: "btn btn-danger" %></p>
+	<!--Form-->
+	<%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: {method: :put}) do |f| %>
+		<%= devise_error_messages! %>
 
+		<!--Name-->
+		<div class="row">
+			<div class="form-group col-md-4">
+				<%= f.label :name, class: "label-color" %><br/>
+				<%= f.email_field :name, autofocus: true, class: "form-control form-background" %>
+			</div>
+		</div>
+
+		<!--Surname6-->
+		<div class="row">
+			<div class="form-group col-md-4">
+				<%= f.label :surname, class: "label-color" %><br/>
+				<%= f.email_field :surname, class: "form-control form-background" %>
+			</div>
+		</div>
+
+		<!--Email-->
+		<div class="row">
+			<div class="form-group col-md-4">
+				<%= f.label :email, class: "label-color" %><br/>
+				<%= f.email_field :email, class: "form-control form-background" %>
+			</div>
+		</div>
+		<br>
+		<!--Devise confirmation request-->
+		<% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+			<div class="label-color">Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
+		<% end %>
+
+		<!--New Password-->
+		<div class="row">
+			<div class="form-group col-md-4">
+				<%= f.label :password, class: "label-color" %>
+				<p class=lable-color">(leave blank if you don't want to change it)</p>
+				<%= f.password_field :password, autocomplete: "off", class: "form-control form-background" %>
+			</div>
+		</div>
+
+		<!--New Password Confirmation-->
+		<div class="row">
+			<div class="form-group col-md-4">
+				<%= f.label :password_confirmation, class: "label-color" %><br/>
+				<%= f.password_field :password_confirmation, autocomplete: "off", class: "form-control form-background" %>
+			</div>
+		</div>
+		</div>
+		<div class="content-container">
+			<h2>Submit changes</h2>
+
+			<!--Password to confirm changes-->
+			<div class="row">
+				<div class="form-group col-md-4">
+					<%= f.label :current_password, class: "label-color" %>
+					<p class="label-color">(we need your current password to confirm your changes)</p>
+					<%= f.password_field :current_password, autocomplete: "off", class: "form-control form-background" %>
+				</div>
+			</div>
+
+			<!--Submit button-->
+			<div class="actions">
+				<%= f.submit "Update", class: "btn btn-primary bg-success" %>
+			</div>
+	<% end %>
+	</div>
+
+	<div class="content-container">
+		<h3>Cancel my account</h3>
+		<p>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), data: {confirm: "Are you sure?"}, method: :delete, class: "btn btn-danger" %></p>
+	</div>
+	

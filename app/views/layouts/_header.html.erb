@@ -1,11 +1,13 @@
 <% if cookies[:dark] %>
 	<%= stylesheet_link_tag 'nav_bar_dark', media: 'all', 'data-turbolinks-track': 'reload' %>
+	<%= stylesheet_link_tag 'forms_dark', media: 'all', 'data-turbolinks-track': 'reload' %>
 <% else %>
 	<%= stylesheet_link_tag 'nav_bar_light', media: 'all', 'data-turbolinks-track': 'reload' %>
+	<%= stylesheet_link_tag 'forms_light', media: 'all', 'data-turbolinks-track': 'reload' %>
 <% end %>
 <nav class="navbar navbar-expand-md background-dark sticky-top">
 	<div class="container-fluid">
-		
+
 		<!--Branding/Logo-->
 		<div class="branding">
 			<%= link_to "onlineshop", shop_path, class: "branding" %>
@@ -31,49 +33,57 @@
 				<!--Settings Dropdown-->
 				<li class="nav-item">
 					<div class="dropdown">
-						<button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						<button class="btn button btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 							<%= t "layouts.header.settings" %>
 						</button>
 						<div class="dropdown-menu dropdown-menu-right dropdown-color" aria-labelledby="dropdownMenuButton">
 							<ul>
-								
+
 								<!--Account Settings-->
+								<br>
 								<p class="h6">
 									<%= t ('layouts.header.account') %>
 									<br>
+								</p>
+								
 								<li>
 									<% if signed_in? %>
-										<%= link_to current_user.name, "profile", class: "dropdown-item" %>
+										<%= link_to current_user.name, "profile", class: "dropdown-item-color" %>
 									<% else %>
-										<%= link_to "Register", new_user_registration_path, class: "dropdown-item" %>
-										<%= link_to "Login", new_user_session_path, class: "dropdown-item" %>
+										<%= link_to "Register", new_user_registration_path, class: "dropdown-item-color" %>
+										<%= link_to "Login", new_user_session_path, class: "dropdown-item-color" %>
 									<% end %>
 								</li>
-								<p>
-									
-									<!--Darkmode Toggle-->
-								<p class="h6">
-									<%= t ('layouts.header.appearance') %>
-									<br>
-								<li>
-									<% if cookies[:dark] %>
-										<%= button_to 'Light Mode', light_path, class: 'dropdown-item' %>
-									<% else %>
-										<%= button_to 'Dark Mode', dark_path, class: 'dropdown-item' %>
-									<% end %>
-								</li>
-								<p>
-									
-									<!--Languages-->
+
+
+								<!--Languages-->
+								<br>
 								<p class="h6">
 									<%= t ('layouts.header.languages') %>
 									<br>
-								<p>
+								</p>
+								
 								<li>
-									<%= link_to_unless_current t('layouts.header.german'), locale_path(locale: 'de'), method: :post, class: 'dropdown-item' %>
+									<%= link_to_unless_current t('layouts.header.german'), locale_path(locale: 'de'), method: :post, class: "dropdown-item-color" %>
 								</li>
 								<li>
-									<%= link_to_unless_current t('layouts.header.english'), locale_path(locale: 'en'), method: :post, class: 'dropdown-item' %>
+									<%= link_to_unless_current t('layouts.header.english'), locale_path(locale: 'en'), method: :post, class: "dropdown-item-color" %>
+								</li>
+
+
+								<!--Darkmode Toggle-->
+								<br>
+								<p class="h6">
+									<%= t ('layouts.header.appearance') %>
+									<br>
+								</p>
+								
+								<li>
+									<% if cookies[:dark] %>
+										<%= button_to 'Light Mode', light_path, class: 'button' %>
+									<% else %>
+										<%= button_to 'Dark Mode', dark_path, class: 'button' %>
+									<% end %>
 								</li>
 							</ul>
 						</div>

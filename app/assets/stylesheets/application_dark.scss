@@ -2,73 +2,55 @@
 @import "font-awesome-sprockets";
 @import "font-awesome";
 
-$background_color_light: whitesmoke;
-$accent_color_light: #3e6b6b;
-$font_color_light: #191919;
-
-$background_color_dark: #191919;
-$accent_color_dark: #214141;
-$font_color_dark: whitesmoke;
+$background_color: #191919;
+$accent_color: #214141;
+$font_color: whitesmoke;
 
 $nav_color: #CED5E9;
 $nav_hover_colo: #e0e7fc;
 $button_color: #7e7e7e;
 
-h1
-{
-  color: $font_color_dark;
-}
-
-h2
-{
-  color: $font_color_dark;
-}
-
-h3
-{
-  color: $font_color_dark;
-}
-
-h4
-{
-  color: $font_color_dark;
-}
-
-p
-{
-  color: $font_color_dark;
-}
-
-
 body
 {
-
   background-image: url("https://nh21ra.db.files.1drv.com/y4mT30tnztHfEfiASCGr8wF8hL8i00L6rludbi5YSJUaD4_WKockve9HAdz0O91GScaEvec53G8XpY4AmpZ6Y15dN-G9xDviS-R0NYM-Zc_HrTOGae2J7bHkBldxWSDu83MxL6WVIAV19V6cTx22aiy7b4pUOnMnhSeWy9R1h4RpQUTA1cDf87RJoW4LLZjIeowBVorJrBYGz8yP8mvZHxGQg?width=5120&height=2880&cropmode=none");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
 }
 
-
-//Blured div
-.blur-div {
-  background: inherit;
-  width:inherit;
-  height:inherit;
-  position: absolute;
-  overflow: hidden; //adding overflow hidden
-  &:before {
-    content: "";
-    width:inherit -50px;
-    height:inherit -50px;
-    background: inherit;
-    position: absolute;
-    left: -25px; //giving minus -25px left position
-    right: 0;
-    top: -25px; //giving minus -25px top position
-    bottom: 0;
-    box-shadow: inset 0 0 0 200px rgba(255, 255, 255, 0.3);
-    backdrop-filter: blur(20px);
-    filter: blur(10px);
-  }
+.content-container
+{
+  background-color: rgba(47, 79, 79, 0.7);
+  padding: 30px;
+  margin: 30px;
 }
+
+h1
+{
+  color: $font_color;
+}
+
+h2
+{
+  color: $font_color;
+}
+
+h3
+{
+  color: $font_color;
+}
+
+h4
+{
+  color: $font_color;
+}
+
+p
+{
+  color: $font_color;
+}
+
+
+
+
+
