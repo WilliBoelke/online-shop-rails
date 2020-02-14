@@ -5,6 +5,7 @@
 	<%= stylesheet_link_tag 'nav_bar_light', media: 'all', 'data-turbolinks-track': 'reload' %>
 	<%= stylesheet_link_tag 'forms_light', media: 'all', 'data-turbolinks-track': 'reload' %>
 <% end %>
+
 <nav class="navbar navbar-expand-md background-dark sticky-top">
 	<div class="container-fluid">
 
@@ -46,15 +47,20 @@
 									<br>
 								</p>
 								
-								<li>
-									<% if signed_in? %>
+								<% if signed_in? %>
+									<li>
 										<%= link_to current_user.name, "profile", class: "dropdown-item-color" %>
-									<% else %>
+									</li>
+									
+								<% else %>
+									<li>
 										<%= link_to "Register", new_user_registration_path, class: "dropdown-item-color" %>
+									</li>
+									<li>
 										<%= link_to "Login", new_user_session_path, class: "dropdown-item-color" %>
-									<% end %>
-								</li>
-
+									</li>
+								<% end %>
+								
 
 								<!--Languages-->
 								<br>
@@ -62,7 +68,7 @@
 									<%= t ('layouts.header.languages') %>
 									<br>
 								</p>
-								
+
 								<li>
 									<%= link_to_unless_current t('layouts.header.german'), locale_path(locale: 'de'), method: :post, class: "dropdown-item-color" %>
 								</li>
@@ -77,7 +83,7 @@
 									<%= t ('layouts.header.appearance') %>
 									<br>
 								</p>
-								
+
 								<li>
 									<% if cookies[:dark] %>
 										<%= button_to 'Light Mode', light_path, class: 'button' %>
