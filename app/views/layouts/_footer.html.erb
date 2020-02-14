@@ -1,11 +1,12 @@
 <% if cookies[:dark] %>
-	<%= stylesheet_link_tag 'application_dark', media: 'all', 'data-turbolinks-track': 'reload' %>
+	<%= stylesheet_link_tag 'nav_bar_dark', media: 'all', 'data-turbolinks-track': 'reload' %>
 <% else %>
-	<%= stylesheet_link_tag 'application_light', media: 'all', 'data-turbolinks-track': 'reload' %>
+	<%= stylesheet_link_tag 'nav_bar_light', media: 'all', 'data-turbolinks-track': 'reload' %>
 <% end %>
+
 <div class="container-fluid text-center text-md-left background-dark">
 	<div class="row">
-		<div class="col-md-6 mt-md-0 mt-3">
+		<div class="col-md-6 mt-md-0 mt-3" >
 			<div class="nav-h1">Footer Content</div>
 			<div class="nav-norm-text">
 				<p>
