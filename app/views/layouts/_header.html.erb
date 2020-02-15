@@ -34,64 +34,43 @@
 				<!--Settings Dropdown-->
 				<li class="nav-item">
 					<div class="dropdown">
-						<button class="btn button btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						<button class="btn button btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+										aria-haspopup="true" aria-expanded="false">
 							<%= t "layouts.header.settings" %>
 						</button>
 						<div class="dropdown-menu dropdown-menu-right dropdown-color" aria-labelledby="dropdownMenuButton">
-							<ul>
-
+							<p>
+								
 								<!--Account Settings-->
-								<br>
-								<p class="h6">
-									<%= t ('layouts.header.account') %>
-									<br>
-								</p>
-								
-								<% if signed_in? %>
-									<li>
-										<%= link_to current_user.name, "profile", class: "dropdown-item-color" %>
-									</li>
-									
-								<% else %>
-									<li>
-										<%= link_to "Register", new_user_registration_path, class: "dropdown-item-color" %>
-									</li>
-									<li>
-										<%= link_to "Login", new_user_session_path, class: "dropdown-item-color" %>
-									</li>
-								<% end %>
-								
+							<div class="dropdown-item dropdown-item-color">
+								<%= t ('layouts.header.account') %> :
+							</div>
+							<% if signed_in? %>
+								<%= link_to current_user.name, "profile", class: "dropdown-item dropdown-item-color" %>
+							<% else %>
+								<%= link_to "Register", new_user_registration_path, class: "dropdown-item dropdown-item-color" %>
+								<%= link_to "Login", new_user_session_path, class: "dropdown-item dropdown-item-color" %>
+							<% end %>
+							<br>
 
-								<!--Languages-->
-								<br>
-								<p class="h6">
-									<%= t ('layouts.header.languages') %>
-									<br>
-								</p>
+							<!--Languages-->
+							<div class="dropdown-item dropdown-item-color">
+								<%= t ('layouts.header.languages') %> :
+							</div>
+							<%= link_to_unless_current t('layouts.header.german'), locale_path(locale: 'de'), method: :post, class: "dropdown-item dropdown-item-color" %>
+							<%= link_to_unless_current t('layouts.header.english'), locale_path(locale: 'en'), method: :post, class: "dropdown-item dropdown-item-color" %>
+							<br>
 
-								<li>
-									<%= link_to_unless_current t('layouts.header.german'), locale_path(locale: 'de'), method: :post, class: "dropdown-item-color" %>
-								</li>
-								<li>
-									<%= link_to_unless_current t('layouts.header.english'), locale_path(locale: 'en'), method: :post, class: "dropdown-item-color" %>
-								</li>
-
-
-								<!--Darkmode Toggle-->
-								<br>
-								<p class="h6">
-									<%= t ('layouts.header.appearance') %>
-									<br>
-								</p>
-
-								<li>
-									<% if cookies[:dark] %>
-										<%= button_to 'Light Mode', light_path, class: 'button' %>
-									<% else %>
-										<%= button_to 'Dark Mode', dark_path, class: 'button' %>
-									<% end %>
-								</li>
-							</ul>
+							<!--Darkmode Toggle-->
+							<div class="dropdown-item dropdown-item-color">
+								<%= t ('layouts.header.appearance') %> :
+							</div>
+							<% if cookies[:dark] %>
+								<%= button_to 'Light Mode', light_path, class: 'button', class: "dropdown-item dropdown-item-color" %>
+							<% else %>
+								<%= button_to 'Dark Mode', dark_path, class: 'button', class: "dropdown-item dropdown-item-color" %>
+							<% end %>
+							</p>
 						</div>
 					</div>
 				</li>

@@ -22,3 +22,15 @@
 <%= render "layouts/footer" %>
 </body>
 </html>
+
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg">
+	<filter id="svgfilter">
+		<feGaussianBlur stdDeviation="8" />
+		<!-- comment out feComponentTransfer to remove the darkness -->
+		<feComponentTransfer>
+			<feFuncR type="linear" slope="0.9"/>
+			<feFuncG type="linear" slope="0.9"/>
+			<feFuncB type="linear" slope="0.9"/>
+		</feComponentTransfer>
+	</filter>
+</svg>

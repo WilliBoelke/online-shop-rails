@@ -33,11 +33,13 @@
 					<%= @label_o %>
 				</button>
 				<div class="dropdown-menu dropdown-color" aria-labelledby="dropdownMenuButton">
-					<%= link_to "Alt bis neu", filter_path(order_scope: :OLD_TO_NEW, filter_scope: @filter_scope), class: "dropdown-item dropdown-item-color" %>
-					<%= link_to "Neuste zuerst", filter_path(order_scope: :NEW_TO_OLD, filter_scope: @filter_scope), class: "dropdown-item dropdown-item-color" %>
-					<%= link_to "Preis absteigend", filter_path(order_scope: :HIGH_TO_LOW, filter_scope: @filter_scope), class: "dropdown-item dropdown-item-color" %>
-					<%= link_to "Preis aufsteigend", filter_path(order_scope: :LOW_TO_HIGH, filter_scope: @filter_scope), class: "dropdown-item dropdown-item-color" %>
-					<%= link_to "Alphabetisch", filter_path(order_scope: :ALPHABETIC, filter_scope: @filter_scope), class: "dropdown-item dropdown-item-color" %>
+					<p>
+						<%= link_to "Alt bis neu", filter_path(order_scope: :OLD_TO_NEW, filter_scope: @filter_scope), class: "dropdown-item dropdown-item-color" %>
+						<%= link_to "Neuste zuerst", filter_path(order_scope: :NEW_TO_OLD, filter_scope: @filter_scope), class: "dropdown-item dropdown-item-color" %>
+						<%= link_to "Preis absteigend", filter_path(order_scope: :HIGH_TO_LOW, filter_scope: @filter_scope), class: "dropdown-item dropdown-item-color" %>
+						<%= link_to "Preis aufsteigend", filter_path(order_scope: :LOW_TO_HIGH, filter_scope: @filter_scope), class: "dropdown-item dropdown-item-color" %>
+						<%= link_to "Alphabetisch", filter_path(order_scope: :ALPHABETIC, filter_scope: @filter_scope), class: "dropdown-item dropdown-item-color" %>
+					</p>
 				</div>
 			</div>
 		</div>
@@ -49,9 +51,11 @@
 					<%= @label_f %>
 				</button>
 				<div class="dropdown-menu dropdown-color" aria-labelledby="dropdownMenuButton">
-					<%= link_to "Alle", filter_path(filter_scope: :ALL_CLOTHES, order_scope: @order_scope), class: "dropdown-item dropdown-item-color" %>
-					<%= link_to "T-Shirts", filter_path(filter_scope: :T_SHIRTS, order_scope: @order_scope), class: "dropdown-item dropdown-item-color" %>
-					<%= link_to "Pullover", filter_path(filter_scope: :PULLOVER, order_scope: @order_scope), class: "dropdown-item dropdown-item-color" %>
+					<p>
+						<%= link_to "Alle", filter_path(filter_scope: :ALL_CLOTHES, order_scope: @order_scope), class: "dropdown-item dropdown-item-color" %>
+						<%= link_to "T-Shirts", filter_path(filter_scope: :T_SHIRTS, order_scope: @order_scope), class: "dropdown-item dropdown-item-color" %>
+						<%= link_to "Pullover", filter_path(filter_scope: :PULLOVER, order_scope: @order_scope), class: "dropdown-item dropdown-item-color" %>
+					</p>
 				</div>
 			</div>
 		</div>
@@ -107,7 +111,8 @@
 						<% end %>
 
 						<!-- Delete für Admin-->
-5						<% if current_user && current_user.has_role?(:admin) %>
+						5
+						<% if current_user && current_user.has_role?(:admin) %>
 							<%= link_to product, class: "item_link", method: :delete, data: {confirm: 'Are you sure?'} do %>
 								<i class="fas fa-trash fa-2x"></i>
 							<% end %>
