@@ -1,12 +1,5 @@
 @import "application_dark";
 
-.content-container
-{
-  background-color: rgba(47, 79, 79, 0.7);
-  padding: 30px;
-  margin: 30px;
-}
-
 .panel-heading [data-toggle="collapse"]:after {
   color: $font_color;
   font-family: 'Glyphicons Halflings';

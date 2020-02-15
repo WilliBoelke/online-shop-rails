@@ -3,17 +3,15 @@
 <html>
 <head>
 	<title>BelegarbeitRor</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<%= csrf_meta_tags %>
 	<%= csp_meta_tag %>
 	<%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
-
 	<% if cookies[:dark] %>
 		<%= stylesheet_link_tag 'application_dark', media: 'all', 'data-turbolinks-track': 'reload' %>
 	<% else %>
 		<%= stylesheet_link_tag 'application_light', media: 'all', 'data-turbolinks-track': 'reload' %>
 	<% end %>
-
-	<meta name="viewport" content="width=device-width" , initial-scale="1">
 </head>
 
 <body class="ice body">

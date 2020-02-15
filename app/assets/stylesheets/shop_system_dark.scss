@@ -17,12 +17,16 @@
   padding: 5px;
 }
 
-.inner{
-  border:solid 2px rgba(255,255,255,0.5);
-  background-color: rgba(6, 12, 32, 0.7);
-  text-align:center;
+.inner {
+  background-color: $container_color;
+  text-align: center;
   margin: 5px;
   padding: 8px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  -khtml-border-radius: 5px;
+  overflow: hidden;
 }
 
 .product_picture{

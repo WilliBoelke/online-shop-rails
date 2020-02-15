@@ -16,10 +16,9 @@ body
   position: relative;
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
-  border-radius: 5px; /* future proofing */
-  -khtml-border-radius: 5px; /* for old Konqueror browsers */
+  border-radius: 5px;
+  -khtml-border-radius: 5px;
   overflow: hidden;
-  /* remove the overflow: hidden to have tapered edges */
 }
 
 .content-container::before {
