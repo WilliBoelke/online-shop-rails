@@ -21,7 +21,7 @@
 		<div class="row">
 			<div class="form-group col-md-4">
 				<%= f.label :name, class: "label-color" %><br/>
-				<%= f.email_field :name, autofocus: true, class: "form-control form-background" %>
+				<%= f.text_field :name, autofocus: true, class: "form-control form-background" %>
 			</div>
 		</div>
 
@@ -29,7 +29,7 @@
 		<div class="row">
 			<div class="form-group col-md-4">
 				<%= f.label :surname, class: "label-color" %><br/>
-				<%= f.email_field :surname, class: "form-control form-background" %>
+				<%= f.text_field :surname, class: "form-control form-background" %>
 			</div>
 		</div>
 
@@ -62,28 +62,26 @@
 				<%= f.password_field :password_confirmation, autocomplete: "off", class: "form-control form-background" %>
 			</div>
 		</div>
+
+		<h2>Submit changes</h2>
+
+		<!--Password to confirm changes-->
+		<div class="row">
+			<div class="form-group col-md-4">
+				<%= f.label :current_password, class: "label-color" %>
+				<p class="label-color">(we need your current password to confirm your changes)</p>
+				<%= f.password_field :current_password, autocomplete: "off", class: "form-control form-background" %>
+			</div>
 		</div>
-		<div class="content-container">
-			<h2>Submit changes</h2>
 
-			<!--Password to confirm changes-->
-			<div class="row">
-				<div class="form-group col-md-4">
-					<%= f.label :current_password, class: "label-color" %>
-					<p class="label-color">(we need your current password to confirm your changes)</p>
-					<%= f.password_field :current_password, autocomplete: "off", class: "form-control form-background" %>
-				</div>
-			</div>
-
-			<!--Submit button-->
-			<div class="actions">
-				<%= f.submit "Update", class: "btn btn-primary bg-success border-0" %>
-			</div>
+		<!--Submit button-->
+		<div class="actions">
+			<%= f.submit "Update", class: "btn btn-primary bg-success border-0" %>
+		</div>
 	<% end %>
-	</div>
-
-	<div class="content-container">
-		<h3>Cancel my account</h3>
-		<p>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), data: {confirm: "Are you sure?"}, method: :delete, class: "btn btn-danger" %></p>
-	</div>
+</div>
+<div class="content-container">
+	<h3>Cancel my account</h3>
+	<p>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), data: {confirm: "Are you sure?"}, method: :delete, class: "btn btn-danger" %></p>
+</div>
 	
