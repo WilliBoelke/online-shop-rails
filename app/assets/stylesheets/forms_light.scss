@@ -23,3 +23,14 @@
   background-color: $background_color !important;
 }
 
+.dropdown-item-color
+{
+  text-decoration: none;
+  color: $nav_color !important;
+
+  &:hover {
+    color: $nav_hover_colo!important;
+    text-decoration: none!important;
+    background-color: $background_color!important;
+  }
+}

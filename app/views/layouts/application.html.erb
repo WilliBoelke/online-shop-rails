@@ -12,6 +12,8 @@
 	<% else %>
 		<%= stylesheet_link_tag 'application_light', media: 'all', 'data-turbolinks-track': 'reload' %>
 	<% end %>
+
+	<meta name="viewport" content="width=device-width" , initial-scale="1">
 </head>
 
 <body class="ice body">
@@ -25,7 +27,7 @@
 
 <svg version="1.1" xmlns="http://www.w3.org/2000/svg">
 	<filter id="svgfilter">
-		<feGaussianBlur stdDeviation="8" />
+		<feGaussianBlur stdDeviation="8"/>
 		<!-- comment out feComponentTransfer to remove the darkness -->
 		<feComponentTransfer>
 			<feFuncR type="linear" slope="0.9"/>
