@@ -4,23 +4,20 @@
 	<%= stylesheet_link_tag 'nav_bar_light', media: 'all', 'data-turbolinks-track': 'reload' %>
 <% end %>
 
-<div class="container-fluid text-center text-md-left background-dark">
+<div class="container-fluid text-center text-md-left background-dark" id="footer-container">
 	<div class="row">
-		<div class="col-md-6 mt-md-0 mt-3" >
-			<div class="nav-h1">Footer Content</div>
-			<div class="nav-norm-text">
-				<p>
-					Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
-					dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
-					clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet,
-					consetetur sadipscing elitr, sed diam
-				</p>
-			</div>
+		<div class="col-md-6 mt-md-0 mt-3">
+			<h4>Footer Content</h4>
+			<p>
+				Diese Seite wurde von J. Eble und W. Bölke im Kurs Webentwiclung an der HTW Berlin entwickelt.
+				Der Code ist auf
+				<a href="https://github.com/WilliBoelke/BelegarbeitWebentwicklung"> GitHib</a>
+				zu finden.
+			</p>
 		</div>
-		<hr class="clearfix w-100 d-md-none pb-3">
 		<div class="col-md-3 mb-md-0 mb-3">
-			<h1 class="nav-h2">About Us</h1>
-			<ul class="list-unstyled">
+			<h4>About Us</h4>
+			<ul>
 				<li>
 					<%= link_to (t "layouts.footer.about"), about_path, class: "nav-link-font" %>
 				</li>
@@ -33,8 +30,8 @@
 			</ul>
 		</div>
 		<div class="col-md-3 mb-md-0 mb-3">
-			<h1 class="nav-h2">Navigation</h1>
-			<ul class="list-unstyled">
+			<h4>Navigation</h4>
+			<ul>
 				<li>
 					<%= link_to (t "layouts.footer.shop"), shop_path, class: "nav-link-font" %>
 				</li>
@@ -47,9 +44,6 @@
 			</ul>
 		</div>
 	</div>
-</div>
-<div class="footer-copyright text-center py-3">© 2019 GitHub:
-	<a href="https://github.com/WilliBoelke/BelegarbeitWebentwicklung"> Repo</a>
 </div>
 </footer>
 	

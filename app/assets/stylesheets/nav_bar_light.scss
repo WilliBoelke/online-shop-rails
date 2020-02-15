@@ -1,14 +1,15 @@
 @import "application_light";
 
 .branding {
-  color: whitesmoke;
+  font-weight: 600;
+  color: #FFF;
+  font-family:'Oswald', 'Arial';
   text-transform: uppercase;
-  font-size: 20px;
-  font-weight: bolder;
+  font-size: 30px;
 
   &:hover {
-    color: whitesmoke;
     text-decoration: none;
+    color: #FFF;
   }
 }
 
@@ -44,16 +45,8 @@
   font-size: 14px;
 }
 
-/*--- Breakpoints --*/
-/*
-Extra small (xs) devices (portrait phones, less than 576px)
-No media query since this is the default in Bootstrap
-Small (sm) devices (landscape phones, 576px and up)
-@media (min-width: 576px) { ... }
-Medium (md) devices (tablets, 768px and up)
-@media (min-width: 768px) { ... }
-Large (lg) devices (desktops, 992px and up)
-@media (min-width: 992px) { ... }
-Extra (xl) large devices (large desktops, 1200px and up)
-@media (min-width: 1200px) { ... }
-*/
+#footer-container
+{
+  padding: 20px;
+}
+
