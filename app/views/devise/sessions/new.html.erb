@@ -7,20 +7,25 @@
 <div class="content-container">
 	<h2>Log in</h2>
 	<br>
-
-	<!--Email Form-->
+	<br>
+	
 	<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-		<div class="field">
-			<%= f.email_field :email, autofocus: true, autocomplete: "email", class: " form-background", placeholder: "Email" %>
+		
+		
+		<!--Email-->
+		<div class="row">
+			<div class="form-group col-md-4">
+				<%= f.email_field :name, autofocus: true, class: "form-control form-background", placeholder: "Email"%>
+			</div>
 		</div>
-		<br>
 
 		<!--Password Form-->
-		<div class="field">
-			<%= f.password_field :password, autocomplete: "current-password", class: " form-background", placeholder: "Password" %>
+		<div class="row">
+			<div class="form-group col-md-4">
+				<%= f.password_field :password,  class: "form-control form-background", placeholder: "Password" %>
+			</div>
 		</div>
-		<br>
-
+		
 		<!--Remember Check-Box-->
 		<% if devise_mapping.rememberable? %>
 			<div class="field">
