@@ -77,7 +77,7 @@
 					<!-- Link zu Show Seite -->
 					<%= link_to product, class: "item_link" do %>
 						<!-- Product-Name -->
-						<h2><%= product.name %></h2>
+						<h1><%= product.name %></h1>
 						<br>
 						<!-- Product-Picture -->
 						<%= image_tag(product.picture, class: "product_picture") %>
@@ -85,15 +85,15 @@
 					<br>
 					<br>
 					<dl class="dl-horizontal dl-horizontal_edit">
-						<!-- Preis -->
-						<dt>Preis:</dt>
-						<dd><%= product.price %> €</dd>
-						<!-- Typ -->
-						<dt>Typ:</dt>
-						<dd><%= product.cloth_type %></dd>
-						<!-- Bechreibung -->
-						<dt>Beschreibung:</dt>
-						<dd><%= product.description %></dd>
+							<!-- Preis -->
+							<h4>Preis:</h4> 
+							<p><%= product.price %> €</p>
+							<!-- Typ -->
+							<h4>Typ:</h4>
+							<p><%= product.cloth_type %></p>
+							<!-- Bechreibung -->
+							<h4>Beschreibung:</h4>
+							<p><%= product.description %></p>
 					</dl>
 					<br>
 					<div style="text-align: center;">
@@ -111,7 +111,6 @@
 						<% end %>
 
 						<!-- Delete für Admin-->
-						5
 						<% if current_user && current_user.has_role?(:admin) %>
 							<%= link_to product, class: "item_link", method: :delete, data: {confirm: 'Are you sure?'} do %>
 								<i class="fas fa-trash fa-2x"></i>

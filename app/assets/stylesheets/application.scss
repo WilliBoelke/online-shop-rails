@@ -52,7 +52,7 @@ body
   padding: 0;
 }
 
-h1, h2, h3, li, p {
+h1, h2, h3, h4, h5, li, p {
   color: #FFF;
   font-family:'Oswald', 'Arial';
 }
@@ -77,6 +77,13 @@ h3 {
 
 h4 {
   font-weight: 300;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+}
+
+h5 {
+  font-size: 17px;
+  font-weight: 200;
   letter-spacing: 5px;
   text-transform: uppercase;
 }

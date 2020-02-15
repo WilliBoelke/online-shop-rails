@@ -22,20 +22,12 @@
 }
 
 .inner {
-  background-color: $container_color;
   text-align: center;
-  margin: 5px;
-  padding: 8px;
-  -moz-border-radius: 5px;
-  -webkit-border-radius: 5px;
-  border-radius: 5px;
-  -khtml-border-radius: 5px;
-  overflow: hidden;
 }
 
 .product_picture {
   height: 250px;
-  border: 1px solid $accent_color;
+  padding: 20px;
 }
 
 .new_form {
