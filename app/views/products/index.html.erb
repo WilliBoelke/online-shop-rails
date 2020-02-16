@@ -30,15 +30,15 @@
 			<div class="dropdown">
 				<button class="btn button btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
 								aria-haspopup="true" aria-expanded="false">
-					<%= @label_o %>
+					<%= @labe6l_o %>
 				</button>
 				<div class="dropdown-menu dropdown-color" aria-labelledby="dropdownMenuButton">
 					<p>
-						<%= link_to "Alt bis neu", filter_path(order_scope: :OLD_TO_NEW, filter_scope: @filter_scope), class: "dropdown-item dropdown-item-color" %>
-						<%= link_to "Neuste zuerst", filter_path(order_scope: :NEW_TO_OLD, filter_scope: @filter_scope), class: "dropdown-item dropdown-item-color" %>
-						<%= link_to "Preis absteigend", filter_path(order_scope: :HIGH_TO_LOW, filter_scope: @filter_scope), class: "dropdown-item dropdown-item-color" %>
-						<%= link_to "Preis aufsteigend", filter_path(order_scope: :LOW_TO_HIGH, filter_scope: @filter_scope), class: "dropdown-item dropdown-item-color" %>
-						<%= link_to "Alphabetisch", filter_path(order_scope: :ALPHABETIC, filter_scope: @filter_scope), class: "dropdown-item dropdown-item-color" %>
+						<%= link_to (t "products.index.oldnew" ), filter_path(order_scope: :OLD_TO_NEW, filter_scope: @filter_scope), class: "dropdown-item dropdown-item-color" %>
+						<%= link_to (t "products.index.newfirst" ), filter_path(order_scope: :NEW_TO_OLD, filter_scope: @filter_scope), class: "dropdown-item dropdown-item-color" %>
+						<%= link_to (t "products.index.pricedown" ), filter_path(order_scope: :HIGH_TO_LOW, filter_scope: @filter_scope), class: "dropdown-item dropdown-item-color" %>
+						<%= link_to (t "products.index.priceup" ), filter_path(order_scope: :LOW_TO_HIGH, filter_scope: @filter_scope), class: "dropdown-item dropdown-item-color" %>
+						<%= link_to (t "products.index.alphabetical" ), filter_path(order_scope: :ALPHABETIC, filter_scope: @filter_scope), class: "dropdown-item dropdown-item-color" %>
 					</p>
 				</div>
 			</div>
@@ -86,13 +86,13 @@
 					<br>
 					<dl class="dl-horizontal dl-horizontal_edit">
 						<!-- Preis -->
-						<h4>Preis:</h4>
+						<h4><%= t "products.show.price" %>:</h4>
 						<p><%= product.price %> €</p>
 						<!-- Typ -->
-						<h4>Typ:</h4>
+						<h4><%= t "products.show.type" %>:</h4>
 						<p><%= product.cloth_type %></p>
 						<!-- Bechreibung -->
-						<h4>Beschreibung:</h4>
+						<h4><%= t "products.show.description" %>:</h4>
 						<p><%= product.description %></p>
 					</dl>
 					<br>

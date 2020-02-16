@@ -50,6 +50,10 @@ de:
       type: "Typ"
       description: "Beschreibung"
 
+
+
+
+
   activerecord:
     attributes:
       user:

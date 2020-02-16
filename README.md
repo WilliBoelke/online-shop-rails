@@ -34,7 +34,7 @@ Ruby
 ## Authors
 
 * **Willi Bölke** - *User, Darkmode, Sprachen* - [WilliBoelke](https://github.com/WilliBoelke)
-* **Willi Bölke** - *Shop und Produkte* - [Jerm0nt](https://github.com/Jerm0nt)
+* **Jerome Eble** - *Shop und Produkte* - [Jerm0nt](https://github.com/Jerm0nt)
 
 ## License
 
