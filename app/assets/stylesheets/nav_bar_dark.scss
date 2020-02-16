@@ -3,6 +3,7 @@
 .branding {
   font-weight: 600;
   color: #FFF;
+  font-weight: normal !important;
   font-family: 'Oswald', 'Arial';
   text-transform: uppercase;
   font-size: 30px;
@@ -10,7 +11,7 @@
   &:hover {
     text-decoration: none;
     color: #FFF;
-  }
+   }
 }
 
 
@@ -18,7 +19,7 @@
   background-color: $accent_color;
 }
 
-.nav-link-font {
+.nav-link-font{
   margin-right: 30px;
   color: $nav_color;
   text-transform: uppercase;
@@ -30,21 +31,8 @@
   }
 }
 
-.nav-h1 {
-  color: whitesmoke;
-  font-size: 18px;
-  font-weight: bold;
-}
 
-.nav-h2 {
-  color: whitesmoke;
-  font-size: 18px;
-}
 
-.nav-norm-text {
-  color: whitesmoke;
-  font-size: 14px;
-}
 
 #footer-container {
   padding: 20px;

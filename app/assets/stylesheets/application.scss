@@ -11,8 +11,6 @@ body
 .content-container
 {
   background-color: $container_color;
-  padding: 30px;
-  margin: 30px;
   position: relative;
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
@@ -51,6 +49,37 @@ body
   margin: 0;
   padding: 0;
 }
+
+//optional margin
+.content-container-margin
+{
+  margin: 30px;
+}
+
+//optional padding
+.content-container-padding
+{
+  padding: 30px;
+}
+
+//optional content alignment
+.content-align-center
+{
+  alignment: center;
+}
+
+//optional content alignment
+.content-align-left
+{
+  alignment: left ;
+}
+
+//optional content alignment
+.content-align-left
+{
+  alignment: right ;
+}
+//Fonts
 
 h1, h2, h3, h4, h5, li, p {
   color: #FFF;

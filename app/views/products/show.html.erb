@@ -3,32 +3,39 @@
 <% else %>
 	<%= stylesheet_link_tag 'shop_system_light', media: 'all', 'data-turbolinks-track': 'reload' %>
 <% end %>
-<div class="content-container inner">
+<div class="content-container content-align-center content-container-padding content-container-margin">
+	<div class="container">
+		<div class="row">
+			<div class="col">
+				<h1><%= @product.name %></h1>
+				<br>
+				<br>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<%= image_tag(@product.picture, width: '500', :style => "border: 1px solid black") %>
+				<br>
+				<br>
+			</div>
+			<div class="col">
+				<h4><%= t "products.show.price" %>:</h4>
+				<p><%= @product.price %> € </p>
 
-	<h1><%= @product.name %></h1>
-	<br>
-	<br>
-	
-	<%= image_tag(@product.picture, width: '500', :style => "border: 1px solid black") %>
-	<br>
-	<br>
-	
-	<h4><%= t "products.show.price" %>:</h4>
-	<p><%= @product.price %> € </p>
-	
-	<h4><%= t "products.show.type" %>:</h4>
-	<p><%= @product.cloth_type %> </p>
-	
-	<h4><%= t "products.show.description" %>:</h4>
-	<p><%= @product.description %> </p>
+				<h4><%= t "products.show.type" %>:</h4>
+				<p><%= @product.cloth_type %> </p>
 
-	<!--- warenkorb.add verlinken --->
-	<i class="fas fa-cart-plus fa-4x"></i>
-	<!--- warchlist.add verlinken --->
-	<i class="fas fa-clock fa-4x"></i>
-	<br>
-	<br>
-
+				<h4><%= t "products.show.description" %>:</h4>
+				<p><%= @product.description %> </p>
+			</div>
+		</div>
+		<div class="row">
+			<!--- warenkorb.add verlinken --->
+			<i class="fas fa-cart-plus fa-4x"></i>
+			<!--- warchlist.add verlinken --->
+			<i class="fas fa-clock fa-4x"></i>
+		</div>
+	</div>
 	<!-- Delete für Admin-->
 	<% if current_user && current_user.has_role?(:admin) %>
 		<%= link_to products_path, class: "item_link" do %>
@@ -44,5 +51,5 @@
 		<br>
 	<% end %>
 </div>
-
+</div>
 
