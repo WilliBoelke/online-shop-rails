@@ -36,7 +36,7 @@
 		<div class="row">
 			<div class="form-group col-md-4">
 				<% if @minimum_password_length %>
-					<p class="label-color">(8 characters minimum)</p>
+					<p class="label-color">(6 characters minimum)</p>
 				<% end %>
 				<%= f.password_field :password, autocomplete: "off", class: "form-control form-background", placeholder: "Password" %>
 			</div>
